@@ -1,9 +1,8 @@
 """Prompt templates for generation and verification.
 
-These are the single source of truth for *what we ask the model to do*. The
-quality of the dataset lives almost entirely in this file, so the instructions
-are explicit about grounding, self-containment, question-type definitions, and
-the difficulty rubric.
+Most of the dataset quality comes from these instructions, so they spell out the
+grounding rules, self-containment, the question-type definitions, and the
+difficulty rubric.
 """
 
 from __future__ import annotations
@@ -81,7 +80,7 @@ EXCERPT:
 
 
 # --------------------------------------------------------------------------- #
-# Verification  (independent model -- the anti-hallucination gate)
+# Verification  (run with an independent model)
 # --------------------------------------------------------------------------- #
 
 VERIFICATION_SYSTEM = """\

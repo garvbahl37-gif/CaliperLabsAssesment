@@ -1,18 +1,17 @@
-"""Verification stage -- the anti-hallucination gate.
+"""Verification: confirm each answer is actually supported by its source.
 
 Two independent checks, cheapest first:
 
-1. **Deterministic grounding** (no LLM, runs anywhere). Confirms the cited
-   ``source_passage`` is actually present in the chunk (so the model cannot
-   invent a quote) and that numbers asserted in a *factual* answer appear in the
-   source. This alone catches the most damaging failure mode -- fabricated
-   passages -- for free.
+1. Deterministic grounding (no LLM). Confirms the cited ``source_passage`` is
+   present in the chunk, so the model cannot invent a quote, and that numbers in
+   a factual answer appear in the source. This catches fabricated passages
+   without an API call.
 
-2. **Independent LLM verification**. A *different* model re-reads the chunk and
-   judges whether the answer is correct and entailed, re-deriving arithmetic for
-   numeric questions. Using a separate model reduces correlated errors.
+2. Independent LLM verification. A different model re-reads the chunk and judges
+   whether the answer is correct and entailed, recomputing the arithmetic on
+   numeric questions. A separate model reduces correlated errors.
 
-A pair is accepted only if grounding passes AND the LLM verdict is in
+A pair is accepted only if grounding passes and the LLM verdict is in
 ``cfg.accept_verdicts``.
 """
 

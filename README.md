@@ -1,37 +1,29 @@
-# 10-K → Verified Q&A Dataset Pipeline
+# 10-K to Verified Q&A Dataset
 
-An automated pipeline that turns any **SEC 10-K filing** into a large,
-**verified** dataset of question–answer pairs for benchmarking LLMs on real
-financial documents — with no human writing questions by hand.
+Takes a SEC 10-K filing and builds a dataset of question/answer pairs from it.
+Every answer goes through a verification step that checks it's actually supported
+by the filing before it's kept, so generated-but-wrong pairs don't make it in.
 
-The headline feature is the **verification stage**: every generated answer must
-survive *two independent checks* — a free deterministic grounding check and an
-independent LLM verifier (a different model) — before it enters the dataset.
-That is what keeps hallucinations out.
+Sample output: [`output/apple_10k_fy2025_dataset.csv`](output/apple_10k_fy2025_dataset.csv),
+247 pairs built from Apple's FY2025 10-K (filed 2025-10-31, fiscal year ended
+2025-09-27).
 
-> **Sample output:** [`output/apple_10k_fy2025_dataset.csv`](output/apple_10k_fy2025_dataset.csv)
-> — **247 verified Q&A pairs** generated from Apple Inc.'s **FY2025 10-K**
-> (filed 2025-10-31, fiscal year ended 2025-09-27).
+## Output format
 
----
-
-## 1. What it produces
-
-Each row has the five required fields plus full provenance and verification
-evidence:
+One row per Q&A pair:
 
 | column | meaning |
 |---|---|
-| `question` | self-contained question (names the company/period) |
-| `answer` | ground-truth answer |
-| `source_passage` | **exact verbatim text** from the filing that supports the answer |
-| `question_type` | `fact_extraction` / `numeric_calculation` / `comparison` / `multi_step_reasoning` |
-| `difficulty` | `easy` / `medium` / `hard` |
-| `section` | 10-K section the pair came from (Risk Factors, MD&A, …) |
-| `company`, `ticker`, `fiscal_year`, `accession`, `chunk_id` | provenance — every pair traces back to the exact filing & passage |
-| `verdict`, `verifier_confidence`, `grounding_overlap`, `source_verbatim` | verification evidence |
+| `question` | the question, written to stand on its own (names the company/period) |
+| `answer` | the answer |
+| `source_passage` | the exact text from the filing the answer comes from |
+| `question_type` | `fact_extraction`, `numeric_calculation`, `comparison`, or `multi_step_reasoning` |
+| `difficulty` | `easy`, `medium`, `hard` |
+| `section` | which 10-K section it came from |
+| `company`, `ticker`, `fiscal_year`, `accession`, `chunk_id` | provenance, so any row traces back to the exact filing and passage |
+| `verdict`, `verifier_confidence`, `grounding_overlap`, `source_verbatim` | verification details |
 
-### Sample rows (real, from the shipped dataset)
+A few real rows from the shipped file:
 
 ```
 [fact_extraction / easy / Business]
@@ -56,108 +48,95 @@ A: The Dow Jones U.S. Technology index ($287), vs Apple ($234) and S&P 500 ($217
 SRC: "Apple Inc. | $ | 100 | ... | 234   S&P 500 Index | $ | 100 | ... | 217 ..."
 ```
 
-### Dataset statistics
+## What's in the sample
 
-| metric | value |
-|---|---|
-| Verified pairs | **247** |
-| Acceptance rate (passed verification) | 98.4% |
-| Mean verifier confidence | 0.98 |
-| Source passages that are exact verbatim quotes | **100%** |
-| Sections covered | 9 |
+247 verified pairs. 98.4% of generated candidates passed verification, mean
+verifier confidence 0.98, and 100% of the source passages are exact substrings
+of the filing.
 
-**By question type:** fact_extraction 144 · multi_step_reasoning 57 ·
-numeric_calculation 28 · comparison 18
-**By difficulty:** easy 123 · medium 97 · hard 27
-**Top sections:** Risk Factors 98 · Financial Statements 74 · MD&A 24 · Business 22
+- By type: fact_extraction 144, multi_step_reasoning 57, numeric_calculation 28, comparison 18
+- By difficulty: easy 123, medium 97, hard 27
+- Top sections: Risk Factors 98, Financial Statements 74, MD&A 24, Business 22
 
-Full machine-readable stats: [`output/apple_10k_fy2025_stats.json`](output/apple_10k_fy2025_stats.json).
-Pairs that *failed* verification are not discarded silently — they are written to
+Machine-readable stats are in
+[`output/apple_10k_fy2025_stats.json`](output/apple_10k_fy2025_stats.json), and
+pairs that failed verification are kept in
 [`output/apple_10k_fy2025_rejected.jsonl`](output/apple_10k_fy2025_rejected.jsonl)
-for transparency.
+rather than thrown away.
 
----
-
-## 2. How it works
+## How it works
 
 ```
-SEC EDGAR 10-K (HTML)
-        │  edgar.py        download by ticker/CIK (polite, retrying)
-        ▼
-   parse.py               table-aware HTML → clean text (numbers stay with labels)
-        ▼
-   chunk.py               split on real "Item N." section headers, then pack into
-                          ~6k-char windows  →  43 section-labelled chunks
-        ▼
-   generate.py  (LLM #1)  per chunk: write grounded Q&A pairs + verbatim source
-        ▼
-   verify.py    (LLM #2)  TWO independent gates per pair:
-                          (a) deterministic grounding  — no LLM, free
-                          (b) independent LLM verifier  — a different model
-        ▼
-   pipeline.py            snap passages to verbatim · dedupe · assemble
-        ▼
-   output/*.csv | *.jsonl | *_stats.json | *_rejected.jsonl
+10-K (HTML)  ->  parse  ->  chunk  ->  generate  ->  verify  ->  assemble  ->  CSV/JSONL
 ```
 
-### The verification stage (the part that matters)
+1. **Download** (`edgar.py`): pulls the 10-K from EDGAR by ticker or CIK, with a
+   proper User-Agent and polite rate limiting.
+2. **Parse** (`parse.py`): HTML to text. Tables are rendered as
+   `Label | col | col` rows so the numbers stay tied to their labels. A lot of
+   the good questions come out of tables, so this matters.
+3. **Chunk** (`chunk.py`): a 10-K always has the same `Item N.` section
+   skeleton, so it splits on those headers and packs each section into roughly
+   6k-character windows. This filing produced 43 chunks, each labelled with its
+   section.
+4. **Generate** (`generate.py`): for each chunk an LLM writes a handful of Q&A
+   pairs and quotes the passage that supports each one.
+5. **Verify** (`verify.py`): two checks, below.
+6. **Assemble** (`pipeline.py`): snap each passage to the exact filing text, drop
+   duplicate questions, write the dataset, stats, and rejects.
 
-A generated answer is accepted **only if it passes both** of these:
+### Verification
 
-1. **Deterministic grounding** (`verify.deterministic_grounding`) — *no LLM, runs
-   anywhere, costs nothing.* It confirms the cited `source_passage` is actually
-   present in the chunk (so the model cannot invent a quote) and that numbers
-   asserted in a *factual* answer are traceable to the source. This alone kills
-   the most damaging failure mode — fabricated passages — for free.
+Two independent checks, cheapest first:
 
-2. **Independent LLM verification** (`verify.llm_verify`) — a **different model**
-   (`claude-opus-4-8`) than the generator (`claude-sonnet-4-6`) re-reads the
-   chunk and judges whether the answer is correct and fully entailed,
-   **re-deriving the arithmetic** for numeric questions. Using a separate model
-   reduces correlated errors: a passage the writer misreads is unlikely to be
-   misread the same way by an independent checker.
+1. **Grounding check (no LLM).** Confirms the quoted `source_passage` is really
+   present in the chunk, so the model can't invent a quote, and that numbers in a
+   factual answer trace back to the source. This catches the worst failure mode,
+   a fabricated passage, without spending anything.
 
-A pair is kept only if grounding passes **and** the verifier returns
-`SUPPORTED`.
+2. **LLM check.** A different model (Opus) than the one that wrote the question
+   (Sonnet) re-reads the chunk and decides whether the answer is correct and
+   supported, recomputing the arithmetic on numeric questions. Using a separate
+   model means a misread is less likely to slip through twice.
 
-**This actually catches real errors.** In this run the verifier rejected a pair
-where the generator claimed Apple's Services net sales grew **$13,989M** — the
-Opus verifier re-derived `109,158 − 96,169 = 12,989` and rejected the answer for
-overstating growth by $1,000M. (See it in `..._rejected.jsonl`.) Of 251
-candidates: 249 `SUPPORTED`, 2 `PARTIAL`, 1 `NOT_SUPPORTED`.
+A pair is kept only if both checks pass and the verdict is `SUPPORTED`.
 
-### Exact source passages (`snap_passage`)
+It catches real mistakes. In this run one pair claimed Apple's Services net sales
+grew $13,989M; the verifier recomputed `109,158 - 96,169 = 12,989` and rejected
+it for overstating growth by $1,000M. Of 251 candidates, 249 came back
+`SUPPORTED`, 2 `PARTIAL`, 1 `NOT_SUPPORTED`.
 
-LLMs lightly reformat quotes (drop a table's `|` separators, swap a curly
-apostrophe for an ASCII one). To honour *"exact text supporting the answer"*,
-after grounding passes we **align the cited passage to the exact verbatim span
-in the chunk** and store that. Result: **100% of shipped `source_passage` values
-are byte-for-byte substrings of the parsed filing.** The rare pair whose evidence
-spans two non-contiguous passages (e.g. a cross-year table comparison) is routed
-to the rejected file by default (`require_verbatim_source`).
+### Exact source passages
 
----
+LLMs tend to tidy up a quote (drop the table `|` separators, swap a curly
+apostrophe for a straight one). Since the column is meant to be exact text, once
+the grounding check passes the pipeline re-aligns the quote to the actual span in
+the chunk and stores that. Every passage in the shipped file is a byte-for-byte
+substring of the parsed filing. The rare pair whose evidence is split across two
+non-adjacent rows (a cross-year table comparison, for example) is dropped by
+default; the `require_verbatim_source` setting controls this.
 
-## 3. Running it
+## Running it
 
-### Install
+Install:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### Live run (generates a fresh dataset from any filing)
-Needs an Anthropic API key. Generation and verification both call the API.
+Live run against any filing (needs an Anthropic API key):
+
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
-python run.py --ticker AAPL                 # latest 10-K for Apple
-python run.py --ticker MSFT --skip 1        # the *previous* 10-K
-python run.py --cik 0000320193              # by CIK instead of ticker
+python run.py --ticker AAPL            # latest 10-K
+python run.py --ticker MSFT --skip 1   # the previous one
+python run.py --cik 0000320193         # by CIK
 ```
 
-### Reproduce the shipped sample offline (no API key, no network)
-The captured model outputs are committed under `data/llm_runs/`, so the **entire
-pipeline** (parse → chunk → grounding → verifier gate → snapping → dedupe →
-output) runs locally against them:
+Reproduce the shipped sample offline, no key or network needed. The model
+outputs are cached under `data/llm_runs/`, so the whole pipeline (parse, chunk,
+grounding, verifier gate, snapping, dedupe, output) runs locally against them:
+
 ```bash
 python run.py --from-cache \
   --html data/raw/aapl-20250927.htm \
@@ -165,88 +144,78 @@ python run.py --from-cache \
   --accession 0000320193-25-000079 --run-name apple_10k_fy2025
 ```
 
-### Tests
+Tests:
+
 ```bash
 python tests/test_chunk.py && python tests/test_verify.py
 ```
 
-> **How the sample's model outputs were produced.** This environment had no API
-> key, so the generation + independent-verification calls were executed with
-> Claude (Sonnet 4.6 generating, Opus 4.8 verifying) using the *exact prompts in
-> [`qa_pipeline/prompts.py`](qa_pipeline/prompts.py)*, and the responses were
-> captured to `data/llm_runs/`. With `ANTHROPIC_API_KEY` set, `run.py` makes the
-> identical calls itself via the Anthropic SDK. The two paths share one code
-> path (`pipeline.run_pipeline`) — only the transport differs (`llm.py`).
+The shipped run uses Claude (Sonnet 4.6 for generation, Opus 4.8 for
+verification). Those responses are cached under `data/llm_runs/` so the dataset
+rebuilds offline; with `ANTHROPIC_API_KEY` set, `run.py` makes the same calls
+live through the Anthropic SDK. Both go through one code path
+(`pipeline.run_pipeline`); only the client in `llm.py` differs.
 
----
-
-## 4. Repository layout
+## Layout
 
 ```
 qa_pipeline/
-  config.py      tunables (models, chunk sizes, thresholds) — all env-overridable
-  edgar.py       resolve + download a 10-K from SEC EDGAR (ticker/CIK)
-  parse.py       table-aware HTML → clean text
-  chunk.py       section detection ("Item N.") + windowing
-  schema.py      Pydantic models (validates LLM output)
-  prompts.py     generation + verification prompts (the source of dataset quality)
-  llm.py         pluggable client: AnthropicClient (live) | ReplayClient (offline)
-  generate.py    chunk → candidate Q&A
-  verify.py      deterministic grounding + LLM verifier + passage snapping
-  pipeline.py    orchestration: generate→verify→assemble, dedupe, write outputs
-  merge_runs.py  merge captured generation+verification files for replay
-run.py           CLI entrypoint
-tests/           unit tests for chunking and verification
-docs/SCALING.md  how to scale to many documents / 1000+ pairs
-data/            raw filing, chunk manifest, captured LLM outputs (replay inputs)
-output/          the shipped dataset (csv + jsonl), stats, rejected pairs
+  config.py      settings (models, chunk sizes, thresholds), all env-overridable
+  edgar.py       download a 10-K from EDGAR
+  parse.py       HTML to clean, table-aware text
+  chunk.py       section detection + windowing
+  schema.py      Pydantic models, validates the LLM output
+  prompts.py     the generation and verification prompts
+  llm.py         client: AnthropicClient (live) or ReplayClient (offline)
+  generate.py    chunk -> candidate Q&A
+  verify.py      grounding check + LLM verifier + passage snapping
+  pipeline.py    orchestration, dedupe, write outputs
+  merge_runs.py  merge captured outputs into the replay format
+run.py           CLI
+tests/           chunking and verification tests
+docs/SCALING.md  scaling to many documents / 1000+ pairs
+data/            raw filing, chunk manifest, captured model outputs
+output/          the dataset, stats, rejected pairs
 ```
 
----
+## Design notes
 
-## 5. Design choices
+- **Section-aware chunking.** Splitting on the `Item N.` headers gives every
+  chunk a real section label and keeps related text together. Table-of-contents
+  rows (which contain `|` because they come from a table) are told apart from the
+  real headers, and the repeating page footer is stripped.
+- **Table-aware parsing.** Numbers stay attached to their row labels, which is
+  where most numeric and comparison questions come from.
+- **Two different models.** Generating with one and verifying with another is a
+  cheap way to avoid correlated mistakes; the verifier is also the stronger model
+  and redoes the math.
+- **Cheap check before the expensive one.** Fabricated quotes are caught for free,
+  so the LLM verifier only spends tokens on plausible pairs.
+- **One pipeline, two clients.** The replay client lets the sample rebuild with no
+  key; the live client adds a response cache so reruns are cheap and resumable.
+- **Keep the rejects.** Failed pairs and per-row verification details stay in the
+  output instead of being hidden.
 
-- **Section-aware chunking over blind splitting.** A 10-K has a fixed skeleton
-  of `Item N.` sections. Detecting them gives every chunk a meaningful `section`
-  label and keeps related content together. TOC rows (which contain `|` from the
-  source table) are distinguished from real headers, and repeating page footers
-  are stripped.
-- **Table-aware parsing.** Financial tables are rendered as
-  `Label | col1 | col2` rows so numbers stay attached to their labels — most of
-  the high-value numeric/comparison questions live in tables.
-- **Two different models for generate vs verify.** Independence is the cheapest
-  way to reduce correlated hallucinations. The verifier is also the *stronger*
-  model, and re-derives arithmetic.
-- **Cheap deterministic gate before the expensive one.** Fabricated quotes are
-  caught for free, so the LLM verifier only spends tokens on plausible pairs.
-- **Pluggable transport / full offline reproducibility.** One pipeline, two
-  clients. The replay client makes the shipped dataset regenerate with no key,
-  and the live client adds a response cache so re-runs are cheap and resumable.
-- **Transparency.** Rejected pairs and per-row verification evidence are kept,
-  not hidden.
+## Limitations
 
-## 6. Known limitations
+- The type mix leans toward fact extraction (58%). Risk Factors is the biggest
+  section and produces a lot of factual questions. Harder numeric and comparison
+  questions are there but underrepresented; `docs/SCALING.md` covers how to steer
+  generation toward the thinner buckets.
+- One verifier is high precision but not perfect. A subtle misread could get
+  through. For a benchmark split I'd use a 3-verifier majority (see the scaling
+  notes).
+- Table linearization loses the 2-D layout. Pipe-separated rows are readable but
+  a complex multi-column table can be ambiguous. Cross-checking numbers against
+  the filing's XBRL data would make numeric answers airtight.
+- Evidence split across non-adjacent passages is dropped rather than cited as
+  multiple spans.
+- Mostly tested on Apple's (Workiva) HTML. The parser handles common filer
+  formats and mis-declared encodings, but unusual layouts may need tweaks.
 
-- **Type mix skews to fact extraction (58%).** The generator produces what the
-  text best supports; Risk Factors (the largest section) yields many factual
-  questions. Hard/numeric/comparison questions are present but under-represented.
-  The fix (steer generation toward under-filled type×difficulty cells) is
-  described in [`docs/SCALING.md`](docs/SCALING.md).
-- **Verification is high-precision, not perfect.** A single independent verifier
-  catches clear errors; subtle misreadings could slip through. For a held-out
-  benchmark split I'd use a 3-verifier majority (see scaling notes).
-- **Table linearization loses 2-D structure.** Pipe-rendered tables are readable
-  but a complex multi-column table can be ambiguous; XBRL cross-checking
-  (proposed in the scaling notes) would make numeric answers bulletproof.
-- **Non-contiguous evidence is dropped** by default rather than represented as a
-  multi-span citation.
-- **Tuned on Apple's (Workiva) HTML.** The parser handles the common filer
-  formats and mis-declared encodings, but exotic layouts may need per-filer
-  cleanup.
+## Scaling
 
-## 7. Scaling to 1000+ pairs / many documents
-
-See **[docs/SCALING.md](docs/SCALING.md)** — covers durable-queue fan-out,
-the Batch API, tiered models, global cross-document dedup via embeddings,
-type/difficulty balancing, stratified filing sampling, and XBRL-based numeric
-verification.
+[`docs/SCALING.md`](docs/SCALING.md) covers running this over many filings and
+into the thousands of pairs: queue-based fan-out, the Batch API, tiered models,
+cross-document dedup with embeddings, type/difficulty balancing, stratified
+filing sampling, and XBRL-based numeric checks.
