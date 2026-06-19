@@ -1,0 +1,99 @@
+{
+  "chunk_id": "bd47d5635fe0",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, where is a significant majority of Apple's manufacturing performed?",
+        "answer": "A significant majority of Apple's manufacturing is performed in whole or in part by outsourcing partners located primarily in China mainland, India, Japan, South Korea, Taiwan and Vietnam, in addition to sourcing from partners and facilities located in the U.S.",
+        "source_passage": "A significant majority of the Company's manufacturing is performed in whole or in part by outsourcing partners located primarily in China mainland, India, Japan, South Korea, Taiwan and Vietnam, in addition to sourcing from partners and facilities located in the U.S.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly lists the countries where Apple's outsourcing manufacturing partners are primarily located, making this a direct single-fact lookup."
+      },
+      {
+        "question": "When did Apple's 10-K for fiscal 2025 state that new U.S. tariffs on imports were first announced?",
+        "answer": "Beginning in the second quarter of 2025, new tariffs were announced on imports to the U.S.",
+        "source_passage": "Beginning in the second quarter of 2025, new tariffs were announced on imports to the U.S. (\"U.S. Tariffs\"), including additional tariffs on imports from China, India, Japan, South Korea, Taiwan, Vietnam and the European Union (\"EU\"), among others.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the timing of the new U.S. tariff announcements as beginning in the second quarter of 2025."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what U.S. government investigation was cited as a potential source of additional tariff risk related to semiconductors?",
+        "answer": "The U.S. Department of Commerce initiated an investigation under Section 232 of the Trade Expansion Act of 1962, as amended, into imports of semiconductors, semiconductor manufacturing equipment, and their derivative products, including downstream products that contain semiconductors.",
+        "source_passage": "the U.S. Department of Commerce has initiated an investigation under Section 232 of the Trade Expansion Act of 1962, as amended, into, among other things, imports of semiconductors, semiconductor manufacturing equipment, and their derivative products, including downstream products that contain semiconductors.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The answer requires identifying a specific regulatory action described in the excerpt, combining the agency name, the legal authority, and the subject matter of the investigation."
+      },
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, what are three specific operational consequences that restrictive international trade measures can impose on Apple's business?",
+        "answer": "Restrictive measures can require Apple to change suppliers, restructure business relationships and operations, and refrain from offering and distributing or cease to offer and distribute affected products, services and third-party applications to its customers, as well as increase the prices of its products and services.",
+        "source_passage": "Restrictive measures can also require the Company to change suppliers, restructure business relationships and operations, refrain from offering and distributing or cease to offer and distribute affected products, services and third-party applications to its customers, and increase the prices of its products and services.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The answer requires synthesizing multiple distinct consequences listed across a single sentence, demanding careful reading and combination of several stated impacts of trade restrictions."
+      },
+      {
+        "question": "Apple's fiscal 2025 10-K Risk Factors describe two compounding effects that trade disputes can have beyond direct supply chain disruption — what are they?",
+        "answer": "Trade and other international disputes can have an adverse impact on the overall macroeconomic environment and result in shifts and reductions in consumer spending and negative consumer sentiment for the Company's products and services.",
+        "source_passage": "Trade and other international disputes can also have an adverse impact on the overall macroeconomic environment and result in shifts and reductions in consumer spending and negative consumer sentiment for the Company's products and services, all of which can further adversely affect the Company's business and results of operations.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "The question asks about second-order macroeconomic effects distinct from direct supply chain impacts, requiring the reader to distinguish between types of risk and combine two related but separate consequences stated in the same sentence."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, how does Apple characterize its geographic revenue exposure relative to the United States?",
+        "answer": "Sales outside the U.S. represent a majority of Apple's total net sales.",
+        "source_passage": "The Company has a large, global business with sales outside the U.S. representing a majority of the Company's total net sales, and the Company believes that it generally benefits from growth in international trade.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states that international sales represent a majority of Apple's total net sales, making this a direct single-fact extraction about Apple's geographic revenue profile."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The source passage appears verbatim in paragraph 3 of the excerpt, and the answer accurately reproduces the list of countries (China mainland, India, Japan, South Korea, Taiwan, Vietnam) plus U.S. sourcing."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage matches the excerpt exactly; it states new U.S. tariffs were announced beginning in the second quarter of 2025, which the answer correctly reports."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt states the U.S. Department of Commerce initiated a Section 232 (Trade Expansion Act of 1962) investigation into semiconductors and derivative products; the answer matches this, with only an immaterial tense difference ('has initiated' vs 'initiated')."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage is present verbatim and the answer faithfully lists the consequences: change suppliers, restructure relationships/operations, refrain from or cease offering affected products/services, and increase prices, all entailed by the excerpt."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.96,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage appears in the excerpt and the answer correctly identifies the two compounding effects: adverse impact on the overall macroeconomic environment, and shifts/reductions in consumer spending plus negative consumer sentiment."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt explicitly states sales outside the U.S. represent a majority of total net sales, which the answer accurately reports."
+    }
+  ]
+}

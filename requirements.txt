@@ -1,0 +1,13 @@
+# Core pipeline dependencies
+requests>=2.31          # SEC EDGAR downloads
+tenacity>=8.2           # retry/backoff for network calls
+beautifulsoup4>=4.12    # HTML parsing
+lxml>=5.0               # fast HTML/XML backend for bs4
+pydantic>=2.5           # typed schema + validation of LLM output
+
+# LLM provider (only needed for live generation; the offline replay path and
+# the parse/chunk/verify-grounding code run without it)
+anthropic>=0.39
+
+# Optional: convenient CSV inspection
+pandas>=2.0

@@ -1,0 +1,99 @@
+{
+  "chunk_id": "d60b56d88cc0",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal year 2025 10-K Risk Factors, what types of adverse outcomes can result from the resolution of legal matters against the company?",
+        "answer": "Adverse resolution of legal matters can result in significant monetary damages, disgorgement of revenue or profits, remedial corporate measures or injunctive relief against the company, and can require the company to change its business practices.",
+        "source_passage": "such an outcome can result in significant monetary damages, disgorgement of revenue or profits, remedial corporate measures or injunctive relief against the Company. Adverse resolution of legal matters has from time to time required, and can in the future require, the Company to change its business practices.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly enumerates the adverse outcomes of legal matter resolution in a single contiguous passage."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K, how does the company characterize compliance with the complex and changing laws and regulations to which it is subject globally?",
+        "answer": "The excerpt states that compliance with these laws and regulations is onerous and expensive.",
+        "source_passage": "Compliance with these laws and regulations is onerous and expensive.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt contains a direct, explicit characterization of compliance burden in a single sentence."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what effect can new and changing laws, regulations, executive orders, directives, and enforcement priorities have on the company beyond increasing costs?",
+        "answer": "Beyond increasing costs, new and changing laws, regulations, executive orders, directives, and enforcement priorities can limit Apple's ability to offer a product, service or feature to customers, impose changes to the design of products and services, impact customer demand, require changes to the business or supply chain, and create uncertainty about how such laws and regulations will be interpreted and applied.",
+        "source_passage": "New and changing laws, regulations, executive orders, directives, and enforcement priorities can adversely affect the Company's business by increasing the Company's costs, limiting the Company's ability to offer a product, service or feature to customers, imposing changes to the design of the Company's products and services, impacting customer demand for the Company's products and services, and requiring changes to the Company's business or supply chain. New and changing laws, regulations, executive orders, directives, and enforcement priorities can also create uncertainty about how such laws and regulations will be interpreted and applied.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering fully requires combining two consecutive sentences that each describe distinct categories of effects beyond cost increases."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, in which two types of specialized applications or technology areas does the excerpt state that risks and costs related to new and changing laws and regulations increase?",
+        "answer": "The excerpt states that risks and costs increase when Apple's products and services are introduced into specialized applications including health and financial services, or when the company expands the use of technologies such as machine learning and artificial intelligence features.",
+        "source_passage": "Risks and costs related to new and changing laws, regulations, executive orders, directives, and enforcement priorities increase as the Company's products and services are introduced into specialized applications, including health and financial services, or as the Company expands the use of technologies, such as machine learning and artificial intelligence features, and must navigate new legal, regulatory and ethical considerations relating to such technologies.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The question requires identifying two distinct categories (specialized application domains and technology types) mentioned together in one sentence, demanding careful reading rather than a single-fact lookup."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what specific product-level consequence does the excerpt identify as a possible outcome if Apple violates export and import regulations?",
+        "answer": "The excerpt states that Apple's products could be banned, delayed or prohibited from importation.",
+        "source_passage": "the Company's products could be banned, delayed or prohibited from importation, which could materially adversely affect the Company's business, reputation, results of operations, financial condition and stock price.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly lists the product-level regulatory consequences in a single clause."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, how does the excerpt describe Apple's ability to receive advance notice before regulatory changes that materially adversely affect its business are announced?",
+        "answer": "The excerpt states that such regulatory changes may be announced with little or no advance notice and the company may not be able to effectively mitigate all adverse impacts from such measures.",
+        "source_passage": "Regulatory changes and other actions that materially adversely affect the Company's business may be announced with little or no advance notice and the Company may not be able to effectively mitigate all adverse impacts from such measures.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly addresses the advance-notice issue and mitigation ability in a single contiguous sentence."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The source_passage appears verbatim in line 1 of the excerpt, and the answer accurately lists monetary damages, disgorgement of revenue/profits, remedial corporate measures or injunctive relief, and changes to business practices."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage 'Compliance with these laws and regulations is onerous and expensive.' appears verbatim in line 5, and the answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The source_passage matches line 5 verbatim, and the answer correctly combines both sentences: the listed effects beyond cost (limiting offerings, design changes, customer demand, supply chain changes) plus the uncertainty in interpretation/application."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The source_passage matches line 6 verbatim; the answer correctly identifies the two areas: specialized applications (health and financial services) and technologies (machine learning and artificial intelligence)."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage appears in line 7; the answer correctly states products could be banned, delayed or prohibited from importation."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The source_passage appears verbatim in line 7, and the answer accurately states regulatory changes may be announced with little or no advance notice and that the Company may not be able to effectively mitigate all adverse impacts."
+    }
+  ]
+}

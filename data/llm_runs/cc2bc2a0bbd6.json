@@ -1,0 +1,99 @@
+{
+  "chunk_id": "cc2bc2a0bbd6",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, what types of personal data are subject to additional privacy, security and breach notification requirements beyond general data protection obligations?",
+        "answer": "Health, biometric, financial and payment card data are subject to additional privacy, security and breach notification requirements.",
+        "source_passage": "Health, biometric, financial and payment card data are subject to additional privacy, security and breach notification requirements, and the Company is subject to audit by governmental authorities regarding the Company's compliance with these obligations.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly lists the specific categories of sensitive data subject to additional requirements in a single sentence."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what specific risk associated with artificial intelligence features is identified in relation to personal data?",
+        "answer": "The risks of inadvertent disclosure of personal data can increase with the introduction of new and complex technologies, such as artificial intelligence features, further exacerbating such risks.",
+        "source_passage": "The risks of inadvertent disclosure of personal data can increase with the introduction of new and complex technologies, such as artificial intelligence features, further exacerbating such risks.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly identifies AI features as a technology that can increase the risk of inadvertent personal data disclosure."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what are the potential consequences if the Company fails to adequately comply with rules and requirements relating to sensitive data such as health and biometric data?",
+        "answer": "If the Company fails to adequately comply with these rules and requirements, the Company can be subject to litigation or government investigations, can be liable for associated investigatory expenses, and can incur significant fees or fines.",
+        "source_passage": "If the Company fails to adequately comply with these rules and requirements, the Company can be subject to litigation or government investigations, can be liable for associated investigatory expenses, and can incur significant fees or fines.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly enumerates the consequences of noncompliance with sensitive data obligations in a single sentence."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, how do international personal data laws apply with respect to the Company's internal corporate structure?",
+        "answer": "These laws apply not only to third-party transactions, but also restrict transfers of personal data among the Company and its international subsidiaries.",
+        "source_passage": "In many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal data among the Company and its international subsidiaries.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "Answering this question requires identifying the specific intra-company scope of data laws, which is explicitly stated but requires distinguishing it from the broader third-party applicability discussed in the same passage."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what potential outcomes could result from a failure or perceived failure to comply with the Company's public statements about personal data use and disclosure?",
+        "answer": "Such a failure or perceived failure could also result in reputational impacts, ongoing audit requirements and significant legal liability.",
+        "source_passage": "Such a failure or perceived failure could also result in reputational impacts, ongoing audit requirements and significant legal liability.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering requires distinguishing between the two-part consequence structure: first the sentence about inquiries and penalties, then the follow-on sentence listing reputational impacts, audits, and legal liability as additional outcomes."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what categories of risk does noncompliance with online safety laws and regulations introduce for the Company's business?",
+        "answer": "These laws and regulations can increase regulatory risks by requiring complex compliance measures and significant modifications to the Company's products, services and operations, and may lead to operational disruptions, heightened privacy and data security risks, increased costs and potential liability and fines, all of which can have a material adverse impact on the Company's business, financial condition, results of operations and stock price.",
+        "source_passage": "These laws and regulations can increase regulatory risks by requiring complex compliance measures and significant modifications to the Company's products, services and operations, and may lead to operational disruptions, heightened privacy and data security risks, increased costs and potential liability and fines, all of which can have a material adverse impact on the Company's business, financial condition, results of operations and stock price.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "Answering requires synthesizing multiple distinct risk categories enumerated across a compound sentence covering regulatory, operational, financial, and market-value impacts from online safety law noncompliance."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage appears verbatim in line 6 of the excerpt and the answer correctly lists health, biometric, financial and payment card data as subject to additional privacy, security and breach notification requirements."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage appears verbatim in line 5 and the answer accurately states that risks of inadvertent disclosure increase with new technologies such as AI features."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage appears verbatim in line 6 and the answer correctly enumerates litigation/government investigations, liability for investigatory expenses, and significant fees or fines as consequences of noncompliance."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.96,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage appears verbatim in line 4; the answer drops only the 'In many cases' qualifier but is otherwise fully entailed, correctly stating the laws restrict transfers among the Company and its international subsidiaries."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage appears verbatim in line 5 and the answer correctly identifies reputational impacts, ongoing audit requirements and significant legal liability as outcomes."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage appears verbatim in line 7 and the answer accurately captures the regulatory, operational, privacy/security, cost, liability and material adverse impact risks from online safety law noncompliance."
+    }
+  ]
+}

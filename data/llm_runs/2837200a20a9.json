@@ -1,0 +1,99 @@
+{
+  "chunk_id": "2837200a20a9",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what geographic scope characterizes Apple's sales relative to total net sales?",
+        "answer": "Sales outside the U.S. representing a majority of the Company's total net sales.",
+        "source_passage": "The Company has international operations with sales outside the U.S. representing a majority of the Company's total net sales.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states that sales outside the U.S. represent a majority of total net sales, making this a direct single-fact lookup."
+      },
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, where are a majority of Apple's supplier facilities, including manufacturing and assembly sites, located?",
+        "answer": "A majority of the Company's supplier facilities, including manufacturing and assembly sites, are located outside the U.S.",
+        "source_passage": "a majority of the Company's supplier facilities, including manufacturing and assembly sites, are located outside the U.S.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the geographic location of a majority of Apple's supplier facilities, requiring only a single-fact lookup."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what specific adverse macroeconomic conditions are identified as able to negatively impact consumer confidence and spending?",
+        "answer": "Slow growth or recession, high unemployment, inflation, tighter credit, higher interest rates, and currency fluctuations.",
+        "source_passage": "Adverse macroeconomic conditions, including slow growth or recession, high unemployment, inflation, tighter credit, higher interest rates, and currency fluctuations, can adversely impact consumer confidence and spending and materially adversely affect demand for the Company's products and services.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The answer requires identifying and listing all specific macroeconomic conditions enumerated in the excerpt, synthesizing multiple items from a single sentence."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what potential financial outcomes for Apple's supply chain partners are cited if global economic conditions deteriorate?",
+        "answer": "Financial instability; inability to obtain credit to finance business operations; and insolvency.",
+        "source_passage": "Potential outcomes include financial instability; inability to obtain credit to finance business operations; and insolvency.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The answer requires linking the general context of uncertain economic conditions to the specific enumerated outcomes for Apple's suppliers and channel partners, combining two adjacent sentences."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what credit and liquidity risks to Apple itself are described as resulting from adverse economic conditions?",
+        "answer": "Increased credit and collectibility risk on the Company's trade receivables; the failure of derivative counterparties and other financial institutions; limitations on the Company's ability to issue new debt; reduced liquidity; and declines in the fair values of the Company's financial instruments.",
+        "source_passage": "Adverse economic conditions can also lead to increased credit and collectibility risk on the Company's trade receivables; the failure of derivative counterparties and other financial institutions; limitations on the Company's ability to issue new debt; reduced liquidity; and declines in the fair values of the Company's financial instruments.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "The answer requires careful reading and synthesis of multiple distinct financial risk categories that adverse economic conditions pose directly to Apple, distinguishing them from risks posed to Apple's partners."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors introduction, are the risks and uncertainties listed described as exhaustive?",
+        "answer": "No; the risks and uncertainties described are explicitly stated to be not exhaustive and should not be considered a complete statement of all potential risks or uncertainties that the Company faces or may face in the future.",
+        "source_passage": "The risks and uncertainties described below are not exhaustive and should not be considered a complete statement of all potential risks or uncertainties that the Company faces or may face in the future.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states that the risk list is not exhaustive, making this a straightforward single-fact lookup about the scope of the disclosed risks."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage 'sales outside the U.S. representing a majority of the Company's total net sales' appears verbatim in the excerpt and the answer restates it accurately."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt states a majority of supplier facilities, including manufacturing and assembly sites, are located outside the U.S.; the answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt enumerates slow growth or recession, high unemployment, inflation, tighter credit, higher interest rates, and currency fluctuations; the answer lists all six correctly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt's sentence on suppliers and channel partners gives 'Potential outcomes include financial instability; inability to obtain credit to finance business operations; and insolvency,' which the answer reproduces accurately."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt lists increased credit and collectibility risk on trade receivables, failure of derivative counterparties and other financial institutions, limitations on issuing new debt, reduced liquidity, and declines in fair values; the answer captures all five correctly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The introduction states the risks are 'not exhaustive and should not be considered a complete statement of all potential risks or uncertainties'; the answer correctly says no, they are not exhaustive."
+    }
+  ]
+}

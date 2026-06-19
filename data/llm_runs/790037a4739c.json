@@ -1,0 +1,84 @@
+{
+  "chunk_id": "790037a4739c",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal year 2025 10-K, who has authority to declare future dividends?",
+        "answer": "Future dividends are subject to declaration by the Company's Board of Directors.",
+        "source_passage": "Future dividends are subject to declaration by the Company's Board of Directors (\"Board\")",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states that dividend declarations are subject to the Board of Directors, making this a direct single-fact lookup."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what obligation does Apple's share repurchase program place on the company regarding acquiring shares?",
+        "answer": "Apple's share repurchase program does not obligate it to acquire any specific number of shares.",
+        "source_passage": "the Company's share repurchase program does not obligate it to acquire any specific number of shares",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the non-obligatory nature of the share repurchase program, requiring only a single lookup."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K, what risk is identified regarding the average price at which Apple repurchases its stock?",
+        "answer": "Price volatility may cause the average price at which the Company repurchases its stock in a given period to exceed the stock's price at a given point in time.",
+        "source_passage": "Price volatility may cause the average price at which the Company repurchases its stock in a given period to exceed the stock's price at a given point in time",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The excerpt identifies a specific repurchase price risk tied to stock volatility, requiring the reader to connect stock price volatility to a concrete financial consequence for the buyback program."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what does Apple believe the price of its stock should reflect, beyond expectations of future growth and profitability?",
+        "answer": "The Company also believes the price of its stock should reflect expectations that its cash dividend will continue at current levels or grow, and that its current share repurchase program will be fully consummated.",
+        "source_passage": "The Company also believes the price of its stock should reflect expectations that its cash dividend will continue at current levels or grow, and that its current share repurchase program will be fully consummated",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering this requires distinguishing between the two stated stock-price belief statements in the excerpt and synthesizing the second one, which references both dividend expectations and the share repurchase program."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K, what potential consequences are identified if Apple fails to meet market expectations related to future growth, profitability, dividends, or share repurchases?",
+        "answer": "If the Company fails to meet expectations related to future growth, profitability, dividends, share repurchases or other market expectations, the price of the Company's stock may decline significantly, which could have a material adverse impact on investor confidence and employee retention.",
+        "source_passage": "If the Company fails to meet expectations related to future growth, profitability, dividends, share repurchases or other market expectations, the price of the Company's stock may decline significantly, which could have a material adverse impact on investor confidence and employee retention",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "The question requires combining multiple failure scenarios (growth, profitability, dividends, repurchases) with the dual downstream impacts (investor confidence and employee retention), demanding synthesis of several elements from a single complex sentence."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt states verbatim that 'Future dividends are subject to declaration by the Company's Board of Directors (\"Board\")'. The answer correctly attributes dividend declaration authority to the Board."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt states 'the Company's share repurchase program does not obligate it to acquire any specific number of shares', exactly matching the cited passage and answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage appears verbatim in the excerpt and the answer accurately reproduces the stated risk that volatility may cause the average repurchase price to exceed the stock's price at a given point."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited sentence about the stock price reflecting expectations that the cash dividend will continue/grow and the repurchase program will be fully consummated appears verbatim in the excerpt; the answer is fully entailed."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt contains the full sentence verbatim describing stock price decline and material adverse impact on investor confidence and employee retention if expectations are not met; the answer matches exactly."
+    }
+  ]
+}

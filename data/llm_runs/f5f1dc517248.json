@@ -1,0 +1,99 @@
+{
+  "chunk_id": "f5f1dc517248",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What was Apple's total net sales for fiscal year 2025?",
+        "answer": "$416,161 million",
+        "source_passage": "Total net sales | $ | 416,161 | $ | 391,035 | $ | 383,285",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The total net sales figure for 2025 is directly stated in the geographic net sales table."
+      },
+      {
+        "question": "How much did Apple's total net sales grow in dollar terms from fiscal year 2024 to fiscal year 2025?",
+        "answer": "$25,126 million ($416,161 million minus $391,035 million)",
+        "source_passage": "Total net sales | $ | 416,161 | $ | 391,035 | $ | 383,285",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The year-over-year increase requires subtracting the 2024 total net sales from the 2025 total net sales using figures in the table."
+      },
+      {
+        "question": "In fiscal year 2025, which geographic region did Apple report as having the largest operating income?",
+        "answer": "Americas, with operating income of $67,656 million",
+        "source_passage": "Operating income/(loss) | $ | 67,656 | $ | 41,790 | $ | 27,082 | $ | 12,454 | $ | 13,062 | $ | ( 38,828 ) | $ | 123,216",
+        "question_type": "comparison",
+        "difficulty": "easy",
+        "rationale": "Comparing the 2025 operating income figures across the six segments shows Americas at $67,656 million is the highest."
+      },
+      {
+        "question": "What was the change in Apple's net sales in China (including Hong Kong and Taiwan) from fiscal year 2023 to fiscal year 2025?",
+        "answer": "A decrease of $8,182 million ($72,559 million in 2023 versus $64,377 million in 2025)",
+        "source_passage": "China (1) | 64,377 | 66,952 | 72,559",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Subtracting the 2025 China net sales from the 2023 China net sales reveals a decline of $8,182 million over the two-year period."
+      },
+      {
+        "question": "As of September 27, 2025, what was Apple's total long-lived assets, and how did it compare to the prior year?",
+        "answer": "Total long-lived assets were $49,834 million as of September 27, 2025, compared to $45,680 million as of September 28, 2024, an increase of $4,154 million.",
+        "source_passage": "Total long-lived assets | $ | 49,834 | $ | 45,680",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "The long-lived asset totals for both balance sheet dates are directly stated in the table, and the difference requires simple subtraction."
+      },
+      {
+        "question": "What was the gross unrecognized tax benefits balance identified as a critical audit matter in Apple's fiscal year 2025 audit, and what portion would impact the effective tax rate if recognized?",
+        "answer": "As of September 27, 2025, the total gross unrecognized tax benefits was $23.2 billion, of which $10.6 billion, if recognized, would impact the Company's effective tax rate.",
+        "source_passage": "As of September 27, 2025, the total amount of gross unrecognized tax benefits was $23.2 billion, of which $10.6 billion, if recognized, would impact the Company's effective tax rate.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "Answering requires combining two related figures from the critical audit matter description — total unrecognized tax benefits and the subset affecting the effective tax rate — and linking them to the fiscal year end date."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 21 states 'Total net sales | $ | 416,161 | $ | 391,035 | $ | 383,285' under the 2025|2024|2023 headers, so 2025 total net sales is $416,161 million."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 416,161 - 391,035 = 25,126 million, matching the stated answer; figures are from the total net sales row at line 21."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.92,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Operating income row (line 3) shows 67,656 | 41,790 | 27,082 | 12,454 | 13,062 | (38,828); first column maps to Americas per the table structure (line 6 headers), and 67,656 is the highest of the six segments."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "China row (line 19) '64,377 | 66,952 | 72,559' under 2025|2024|2023 headers; re-derived 72,559 - 64,377 = 8,182 million decrease from 2023 to 2025, matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 28 'Total long-lived assets | $ | 49,834 | $ | 45,680' under 2025|2024 headers (Sept 27, 2025 and Sept 28, 2024); re-derived 49,834 - 45,680 = 4,154 million increase, matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Lines 43-44 state verbatim that as of September 27, 2025 gross unrecognized tax benefits were $23.2 billion, of which $10.6 billion if recognized would impact the effective tax rate."
+    }
+  ]
+}

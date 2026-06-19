@@ -1,0 +1,99 @@
+{
+  "chunk_id": "8c613469a87f",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "As of September 27, 2025, what was the total value of Apple's cash, cash equivalents, and marketable securities?",
+        "answer": "$132.4 billion",
+        "source_passage": "cash, cash equivalents and marketable securities, which totaled $132.4 billion as of September 27, 2025",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the combined balance of cash, cash equivalents, and marketable securities as $132.4 billion."
+      },
+      {
+        "question": "As of September 27, 2025, what was the aggregate principal amount of Apple's outstanding fixed-rate notes, and how much of that was payable within 12 months?",
+        "answer": "The aggregate principal amount was $91.3 billion, with $12.4 billion payable within 12 months.",
+        "source_passage": "the Company had outstanding fixed-rate notes with varying maturities for an aggregate principal amount of $91.3 billion (collectively the \"Notes\"), with $12.4 billion payable within 12 months",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states both the total aggregate principal and the near-term portion due within 12 months."
+      },
+      {
+        "question": "In fiscal 2025, what was the total amount Apple spent on share repurchases and dividend payments combined?",
+        "answer": "$104.7 billion ($89.3 billion in share repurchases plus $15.4 billion in dividends and dividend equivalents)",
+        "source_passage": "During 2025, the Company repurchased $89.3 billion of its common stock and paid dividends and dividend equivalents of $15.4 billion.",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The answer requires adding the two figures stated in the excerpt — $89.3 billion in repurchases and $15.4 billion in dividends — to arrive at the combined capital return of $104.7 billion."
+      },
+      {
+        "question": "As of September 27, 2025, how much larger were Apple's manufacturing purchase obligations compared to its other purchase obligations?",
+        "answer": "$41.4 billion larger ($56.2 billion in manufacturing purchase obligations minus $14.8 billion in other purchase obligations)",
+        "source_passage": "the Company had manufacturing purchase obligations of $56.2 billion, with $55.4 billion payable within 12 months. Other Purchase Obligations ... the Company had other purchase obligations of $14.8 billion, with $7.0 billion payable within 12 months.",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "The answer requires subtracting other purchase obligations ($14.8 billion) from manufacturing purchase obligations ($56.2 billion), both figures appearing explicitly in the excerpt."
+      },
+      {
+        "question": "In May 2025, Apple announced a new share repurchase program and raised its quarterly dividend. What were the size of the new repurchase program and the new quarterly dividend per share?",
+        "answer": "The new share repurchase program was up to $100 billion, and the quarterly dividend was raised to $0.26 per share.",
+        "source_passage": "In May 2025, the Company announced a new share repurchase program of up to $100 billion and raised its quarterly dividend from $0.25 to $0.26 per share beginning in May 2025.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "Both the repurchase program size and the new dividend per share are explicitly stated in a single sentence in the excerpt."
+      },
+      {
+        "question": "As of September 27, 2025, what was the total of Apple's short-term obligations due within 12 months across commercial paper, lease payments, and the deemed repatriation tax payable?",
+        "answer": "$19.4 billion ($8.0 billion commercial paper + $2.6 billion lease payments + $8.8 billion deemed repatriation tax payable)",
+        "source_passage": "the Company had $8.0 billion of commercial paper outstanding, which was payable within 12 months ... the Company had fixed lease payment obligations of $16.8 billion, with $2.6 billion payable within 12 months ... the balance of the deemed repatriation tax payable imposed by the U.S. Tax Cuts and Jobs Act of 2017 (\"TCJA\") was $8.8 billion, which was payable within 12 months",
+        "question_type": "numeric_calculation",
+        "difficulty": "hard",
+        "rationale": "The answer requires identifying and summing three distinct near-term obligation figures from different paragraphs of the excerpt: commercial paper ($8.0B), current lease payments ($2.6B), and the deemed repatriation tax payable ($8.8B)."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 4 of the excerpt states cash, cash equivalents and marketable securities totaled $132.4 billion as of September 27, 2025, matching the answer exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 7 states fixed-rate notes of an aggregate principal amount of $91.3 billion with $12.4 billion payable within 12 months, matching both figures."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 20 gives $89.3B repurchases and $15.4B dividends; re-deriving 89.3 + 15.4 = 104.7, which matches the stated combined total."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Lines 12 and 14 give $56.2B manufacturing and $14.8B other purchase obligations; re-deriving 56.2 - 14.8 = 41.4, matching the stated difference."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 20 states the May 2025 new repurchase program of up to $100 billion and the dividend raised from $0.25 to $0.26 per share, matching both figures."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 8 ($8.0B commercial paper), line 10 ($2.6B lease payable within 12 months), and line 16 ($8.8B deemed repatriation tax) all confirm; 8.0 + 2.6 + 8.8 = 19.4, matching the stated sum."
+    }
+  ]
+}

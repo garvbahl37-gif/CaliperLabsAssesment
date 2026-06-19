@@ -1,0 +1,99 @@
+{
+  "chunk_id": "785c30758a83",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "As of what date did Apple's principal executive officer and principal financial officer conclude that the Company's disclosure controls and procedures were effective as of fiscal year 2025?",
+        "answer": "As of September 27, 2025.",
+        "source_passage": "the Company's principal executive officer and principal financial officer have concluded that the Company's disclosure controls and procedures as defined in Rules 13a-15(e) and 15d-15(e) under the Exchange Act were effective as of September 27, 2025",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the date on which disclosure controls and procedures were evaluated and concluded to be effective."
+      },
+      {
+        "question": "Which framework did Apple's management use to assess the effectiveness of the Company's internal control over financial reporting in fiscal year 2025?",
+        "answer": "The criteria set forth in Internal Control – Integrated Framework issued by the Committee of Sponsoring Organizations of the Treadway Commission (2013 framework).",
+        "source_passage": "Management conducted an assessment of the effectiveness of the Company's internal control over financial reporting based on the criteria set forth in Internal Control – Integrated Framework issued by the Committee of Sponsoring Organizations of the Treadway Commission (2013 framework).",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly names the assessment framework used by Apple management for evaluating internal control over financial reporting."
+      },
+      {
+        "question": "What was the conclusion of Apple's management regarding the effectiveness of internal control over financial reporting as of September 27, 2025?",
+        "answer": "Management concluded that its internal control over financial reporting was effective as of September 27, 2025 to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements in accordance with GAAP.",
+        "source_passage": "Based on the Company's assessment, management has concluded that its internal control over financial reporting was effective as of September 27, 2025 to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements in accordance with GAAP.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states management's conclusion about the effectiveness of internal controls as of the fiscal year-end date."
+      },
+      {
+        "question": "Which independent registered public accounting firm issued an audit report on Apple's internal control over financial reporting for fiscal year 2025?",
+        "answer": "Ernst & Young LLP.",
+        "source_passage": "The Company's independent registered public accounting firm, Ernst & Young LLP, has issued an audit report on the Company's internal control over financial reporting, which appears in Part II, Item 8 of this Form 10-K.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly identifies Ernst & Young LLP as the firm that issued the audit report on Apple's internal control over financial reporting."
+      },
+      {
+        "question": "According to Apple's fiscal year 2025 10-K, what level of assurance does the Company's internal control over financial reporting provide, and what key limitation does management acknowledge regarding its ability to prevent or detect errors and fraud?",
+        "answer": "The internal controls provide only reasonable, not absolute, assurance. Management acknowledges that it does not expect the Company's internal controls will prevent or detect all errors and all fraud.",
+        "source_passage": "Management, including the Company's Chief Executive Officer and Chief Financial Officer, does not expect that the Company's internal controls will prevent or detect all errors and all fraud. A control system, no matter how well designed and operated, can provide only reasonable, not absolute, assurance that the objectives of the control system are met.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering requires combining two distinct facts from the excerpt: the level of assurance provided (reasonable, not absolute) and the explicit acknowledgment that controls will not catch all errors and fraud."
+      },
+      {
+        "question": "Were there any material changes in Apple's internal control over financial reporting during the fourth quarter of fiscal year 2025?",
+        "answer": "No. There were no changes in the Company's internal control over financial reporting during the fourth quarter of 2025 that have materially affected, or are reasonably likely to materially affect, the Company's internal control over financial reporting.",
+        "source_passage": "There were no changes in the Company's internal control over financial reporting during the fourth quarter of 2025, which were identified in connection with management's evaluation required by paragraph (d) of Rules 13a-15 and 15d-15 under the Exchange Act, that have materially affected, or are reasonably likely to materially affect, the Company's internal control over financial reporting.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states that no material changes to internal control over financial reporting occurred during the fourth quarter of 2025."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 2 states disclosure controls 'were effective as of September 27, 2025'; the cited passage and answer date match exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 10 names the 'Internal Control – Integrated Framework issued by the Committee of Sponsoring Organizations of the Treadway Commission (2013 framework)', matching the answer verbatim."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 10 states ICFR 'was effective as of September 27, 2025 to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements in accordance with GAAP'; answer is fully entailed."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 10 identifies 'Ernst & Young LLP' as the firm that issued the audit report on ICFR; answer matches."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 8 supports both facts: controls 'can provide only reasonable, not absolute, assurance' and management 'does not expect that the Company's internal controls will prevent or detect all errors and all fraud'."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 12 states there were no changes in ICFR during the fourth quarter of 2025 that materially affected or are reasonably likely to materially affect ICFR; answer matches."
+    }
+  ]
+}

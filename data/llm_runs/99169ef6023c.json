@@ -1,0 +1,99 @@
+{
+  "chunk_id": "99169ef6023c",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What were Apple's total net sales for fiscal year 2025?",
+        "answer": "$416,161 million",
+        "source_passage": "Total net sales | $ | 416,161 | $ | 391,035 | $ | 383,285",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The total net sales figure for 2025 is directly stated in the disaggregated net sales table."
+      },
+      {
+        "question": "By how much did Apple's Services net sales grow from fiscal year 2024 to fiscal year 2025, in dollar terms?",
+        "answer": "$13,989 million ($109,158 million in 2025 minus $96,169 million in 2024)",
+        "source_passage": "Services (1) | 109,158 | 96,169 | 85,200",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The answer requires subtracting the 2024 Services net sales figure from the 2025 figure, both of which are provided in the disaggregated net sales table."
+      },
+      {
+        "question": "Which of Apple's product categories had higher net sales in fiscal year 2025: Mac or iPad?",
+        "answer": "Mac had higher net sales in fiscal year 2025, at $33,708 million compared to iPad's $28,023 million.",
+        "source_passage": "Mac | 33,708 | 29,984 | 29,357\niPad | 28,023 | 26,694 | 28,300",
+        "question_type": "comparison",
+        "difficulty": "easy",
+        "rationale": "The net sales for Mac and iPad in 2025 are both stated in the table, and a direct comparison shows Mac exceeded iPad."
+      },
+      {
+        "question": "What was Apple's total net sales growth rate from fiscal year 2024 to fiscal year 2025?",
+        "answer": "Approximately 6.4% (($416,161 - $391,035) / $391,035 × 100 = $25,126 / $391,035 ≈ 6.4%)",
+        "source_passage": "Total net sales | $ | 416,161 | $ | 391,035 | $ | 383,285",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The growth rate requires dividing the year-over-year change in total net sales by the prior year figure, both of which are provided in the table."
+      },
+      {
+        "question": "As of September 27, 2025, what percentage of Apple's total deferred revenue does the company expect to be realized within one year, and what is the total deferred revenue balance?",
+        "answer": "Apple expects 66% of total deferred revenue to be realized in less than a year, and the total deferred revenue balance was $13.7 billion as of September 27, 2025.",
+        "source_passage": "As of September 27, 2025 and September 28, 2024, the Company had total deferred revenue of $13.7 billion and $12.8 billion, respectively. As of September 27, 2025, the Company expects 66% of total deferred revenue to be realized in less than a year, 23% within one-to-two years, 9% within two-to-three years and 2% in greater than three years.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering requires combining two distinct facts from the same paragraph: the total deferred revenue balance and the expected realization schedule."
+      },
+      {
+        "question": "How does Apple account for third-party application sales through the App Store — on a gross or net basis — and what does it recognize in Services net sales?",
+        "answer": "Apple accounts for all third-party application–related sales on a net basis by recognizing in Services net sales only the commission it retains, because the Company does not obtain control of the product before transferring it to the customer.",
+        "source_passage": "For third-party applications sold through the App Store, the Company does not obtain control of the product before transferring it to the customer. Therefore, the Company accounts for all third-party application–related sales on a net basis by recognizing in Services net sales only the commission it retains.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The answer requires interpreting the accounting policy described for App Store third-party sales and identifying the net-basis recognition treatment and what is recorded in Services net sales."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 21 states 'Total net sales | $ | 416,161' for 2025, matching the answer exactly."
+    },
+    {
+      "verdict": "NOT_SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": false,
+      "passage_supports_answer": true,
+      "reasoning": "Re-deriving: 109,158 - 96,169 = 12,989, not 13,989. The answer overstates the growth by $1,000 million, so the arithmetic is wrong."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Lines 17-18 give Mac 33,708 and iPad 28,023 for 2025; Mac is correctly identified as higher with the right figures."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Check: (416,161 - 391,035)/391,035 = 25,126/391,035 = 0.0643 ≈ 6.4%, which matches the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 26 states total deferred revenue of $13.7 billion and that 66% is expected to be realized in less than a year, both matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 11 states Apple accounts for all third-party application sales on a net basis, recognizing only the commission retained in Services net sales, because it does not obtain control before transfer."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "chunk_id": "d59aeee802a2",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What was Apple's diluted earnings per share for fiscal year 2025?",
+        "answer": "$7.46",
+        "source_passage": "Diluted earnings per share | $ | 7.46 | $ | 6.08 | $ | 6.13",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The diluted EPS for 2025 is directly stated in the EPS computation table as $7.46."
+      },
+      {
+        "question": "By how much did Apple's net income change from fiscal year 2024 to fiscal year 2025, in millions?",
+        "answer": "Net income increased by $18,274 million, from $93,736 million in 2024 to $112,010 million in 2025.",
+        "source_passage": "Net income | $ | 112,010 | $ | 93,736 | $ | 96,995",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The answer requires subtracting the 2024 net income ($93,736M) from the 2025 net income ($112,010M) to arrive at the $18,274M increase."
+      },
+      {
+        "question": "As of September 27, 2025, what was the total fair value of Apple's cash, cash equivalents and marketable securities?",
+        "answer": "$132,420 million",
+        "source_passage": "Total | $ | 134,711 | $ | 736 | $ | ( 3,027 ) | $ | 132,420 | $ | 35,934 | $ | 18,763 | $ | 77,723",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The total fair value as of September 27, 2025 is directly stated in the 2025 table as $132,420 million."
+      },
+      {
+        "question": "How did Apple's total fair value of cash, cash equivalents and marketable securities change between September 28, 2024 and September 27, 2025?",
+        "answer": "The total fair value decreased by $24,230 million, from $156,650 million as of September 28, 2024 to $132,420 million as of September 27, 2025.",
+        "source_passage": "Total | $ | 134,711 | $ | 736 | $ | ( 3,027 ) | $ | 132,420 | $ | 35,934 | $ | 18,763 | $ | 77,723\n\n2024\n...Total (2)(3) | $ | 160,600 | $ | 688 | $ | ( 4,638 ) | $ | 156,650 | $ | 29,943 | $ | 35,228 | $ | 91,479",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "The answer requires comparing the total fair values from the 2025 ($132,420M) and 2024 ($156,650M) tables and computing the year-over-year decrease of $24,230M."
+      },
+      {
+        "question": "As of September 28, 2024, what amounts of Apple's cash and current marketable securities were held in escrow and restricted from general use?",
+        "answer": "$2.6 billion of cash and cash equivalents and $13.2 billion of current marketable securities were held in escrow and restricted from general use as of September 28, 2024.",
+        "source_passage": "(2)As of September 28, 2024, cash and cash equivalents included $2.6 billion held in escrow and restricted from general use. These restricted cash and cash equivalents were designated to settle the Company's obligation related to the State Aid Decision (refer to Note 7, \"Income Taxes\"). (3)As of September 28, 2024, current marketable securities included $13.2 billion held in escrow and restricted from general use. These restricted marketable securities were designated to settle the Company's obligation related to the State Aid Decision (refer to Note 7, \"Income Taxes\").",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "Answering requires combining two separate footnotes (2) and (3) to identify both the cash and marketable securities amounts held in escrow, and recognizing that both relate to the State Aid Decision obligation."
+      },
+      {
+        "question": "What was the total net unrealized loss on Apple's Level 2 financial instruments as of September 27, 2025?",
+        "answer": "The net unrealized loss on Level 2 instruments was $2,466 million (unrealized gains of $559 million minus unrealized losses of $3,025 million).",
+        "source_passage": "Subtotal | 100,493 | 559 | ( 3,025 ) | 98,027 | 2,395 | 17,909 | 77,723",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The answer requires reading the Level 2 subtotal row for unrealized gains ($559M) and unrealized losses ($3,025M) and computing the net figure of -$2,466M."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 14 of the excerpt states 'Diluted earnings per share | $ | 7.46' for 2025, matching the answer exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Net income is 112,010 (2025) and 93,736 (2024) on line 8; 112,010 - 93,736 = 18,274, matching the stated increase."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The 2025 Total row (line 39) shows Fair Value of 132,420, directly supporting the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Total fair value was 156,650 in 2024 (line 58) and 132,420 in 2025 (line 39); 156,650 - 132,420 = 24,230 decrease, matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Footnotes (2) and (3) (lines 61-62) state $2.6 billion cash/cash equivalents and $13.2 billion current marketable securities held in escrow for the State Aid Decision as of September 28, 2024, matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Level 2 subtotal (line 38) shows unrealized gains 559 and unrealized losses (3,025); 559 - 3,025 = -2,466, a net loss of $2,466 million, matching the answer."
+    }
+  ]
+}

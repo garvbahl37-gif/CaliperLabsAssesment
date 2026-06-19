@@ -1,0 +1,84 @@
+{
+  "chunk_id": "cd439426e57d",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, through what channels does Apple make statements about its values and the environmental and societal impact of its business?",
+        "answer": "Apple makes statements about its values through various reports, information provided on the Company's website, and in press statements and other communications.",
+        "source_passage": "The Company makes statements about its values, including the environmental and societal impact of its business, through various reports, information provided on the Company's website, and in press statements and other communications.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly lists the channels Apple uses to communicate its values, making this a straightforward single-fact lookup."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K, what types of stakeholders are identified as having differing expectations about social and other issues related to Apple's business?",
+        "answer": "The stakeholders identified include governments, regulators, investors, employees, customers and others.",
+        "source_passage": "Various stakeholders, including governments, regulators, investors, employees, customers and others, have differing expectations about a wide range of social and other issues related to the Company's business.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly enumerates the stakeholder groups, requiring only a direct lookup from the text."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what risks are associated with Apple's environmental and other goals and initiatives?",
+        "answer": "Apple's environmental and other goals and initiatives involve risks and uncertainties, require investments, and depend in part on third-party performance or data that is outside the Company's control, and the Company may not be able to fully achieve all of its goals and initiatives.",
+        "source_passage": "The Company also pursues environmental and other goals and initiatives that involve risks and uncertainties, require investments, and depend in part on third-party performance or data that is outside the Company's control, and the Company may not be able to fully achieve all of its goals and initiatives.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "Answering this question requires synthesizing multiple risk characteristics described in a single sentence about Apple's environmental initiatives."
+      },
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, what categories of laws and standards does Apple face challenges in complying with regarding stakeholder expectations?",
+        "answer": "Apple faces challenges complying with evolving, varied and at times conflicting federal, state and international laws, executive orders, regulations and standards.",
+        "source_passage": "comply with evolving, varied and at times conflicting federal, state and international laws, executive orders, regulations and standards",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The excerpt specifies multiple jurisdictional and regulatory categories that Apple must navigate, requiring synthesis of several descriptors from the text."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K, what adverse consequences can result from Apple's failure, or perceived failure, to advance its business and values or align with stakeholders' expectations?",
+        "answer": "Such failures can result in adverse reactions by consumers and other stakeholders, including the commencement of legal and regulatory proceedings against the Company, and can materially adversely affect the Company's business, reputation, results of operations, financial condition and stock price.",
+        "source_passage": "can result in adverse reactions by consumers and other stakeholders, including the commencement of legal and regulatory proceedings against the Company, and can materially adversely affect the Company's business, reputation, results of operations, financial condition and stock price.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "This question requires combining the triggering conditions (failure or perceived failure across multiple efforts) with the full chain of enumerated consequences, demanding careful reading of the entire risk statement."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The source passage appears verbatim in the excerpt and the answer accurately lists the three channels (various reports, Company website information, press statements and other communications)."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt explicitly enumerates the stakeholders as governments, regulators, investors, employees, customers and others, exactly matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The answer correctly captures that the environmental goals involve risks/uncertainties, require investments, depend on third-party performance/data outside Apple's control, and may not be fully achievable, all entailed by the passage."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage states 'evolving, varied and at times conflicting federal, state and international laws, executive orders, regulations and standards', matching the answer exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The answer fully reflects the enumerated consequences in the excerpt: adverse reactions by consumers/stakeholders, legal and regulatory proceedings, and material adverse effects on business, reputation, results of operations, financial condition and stock price."
+    }
+  ]
+}

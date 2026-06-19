@@ -1,0 +1,99 @@
+{
+  "chunk_id": "59416857c020",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, in which countries are Apple's primary outsourcing partners that perform manufacturing located?",
+        "answer": "China mainland, India, Japan, South Korea, Taiwan and Vietnam, in addition to the U.S.",
+        "source_passage": "A significant majority of the Company's manufacturing is performed in whole or in part by outsourcing partners located primarily in China mainland, India, Japan, South Korea, Taiwan and Vietnam, in addition to sourcing from partners and facilities located in the U.S.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly lists the countries where Apple's primary outsourcing manufacturing partners are located."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what trade-off does Apple acknowledge regarding its outsourcing arrangements for manufacturing and logistics?",
+        "answer": "While these arrangements can lower operating costs, they also reduce the Company's direct control over production and distribution.",
+        "source_passage": "While these arrangements can lower operating costs, they also reduce the Company's direct control over production and distribution.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states the dual consequence of outsourcing: lower operating costs versus reduced direct control over production and distribution."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, who bears consumer-facing warranty responsibility when an outsourcing partner causes a product defect, even if the partner agreement includes defect expense reimbursement provisions?",
+        "answer": "Apple (the Company) generally remains responsible to the consumer for warranty and out-of-warranty service in the event of product defects.",
+        "source_passage": "Although arrangements with these partners may contain provisions for product defect expense reimbursement, the Company generally remains responsible to the consumer for warranty and out-of-warranty service in the event of product defects and experiences unanticipated product defect liabilities from time to time.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The answer requires combining two related clauses: that partner agreements may include reimbursement provisions, yet Apple still retains direct consumer warranty liability, making this a nuanced interpretation of contractual responsibility."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what specific historical example does Apple cite to illustrate the risk of supply disruptions from single or limited component sources?",
+        "answer": "The global semiconductor industry has in the past experienced high demand and shortages of supply, which adversely affected the Company's ability to obtain sufficient quantities of components and products on commercially reasonable terms, or at all.",
+        "source_passage": "For example, the global semiconductor industry has in the past experienced high demand and shortages of supply, which adversely affected the Company's ability to obtain sufficient quantities of components and products on commercially reasonable terms, or at all.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly uses this semiconductor shortage as the illustrative example of supply disruption risk from single or limited sources."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what are the two categories of potential adverse effects identified for new products and services that replace or supersede existing offerings?",
+        "answer": "New products, services and technologies may replace or supersede existing offerings and may produce lower revenues and lower profit margins.",
+        "source_passage": "New products, services and technologies may replace or supersede existing offerings and may produce lower revenues and lower profit margins.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states both financial risks — lower revenues and lower profit margins — that can result when new offerings replace existing ones."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what two compounding risks does Apple identify for components that are available from multiple sources, beyond the risk of single-source dependency?",
+        "answer": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations.",
+        "source_passage": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company's business, results of operations, financial condition and stock price.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The question requires careful reading to recognize that Apple distinguishes multi-source components as still vulnerable to two distinct risks — industry-wide shortages and commodity pricing fluctuations — which is a non-obvious nuance in the risk disclosure."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage appears verbatim in line 5, listing China mainland, India, Japan, South Korea, Taiwan and Vietnam, in addition to the U.S. The answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 5 states verbatim that arrangements can lower operating costs but reduce direct control over production and distribution. Answer is exact and fully entailed."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 5 confirms partner agreements may contain defect reimbursement provisions yet Apple generally remains responsible to the consumer for warranty/out-of-warranty service. Answer correctly captures retained consumer warranty liability."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 8 cites the global semiconductor industry's past high demand and supply shortages as the example. Cited passage and answer match the excerpt verbatim."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 3 states verbatim that new products/services/technologies may replace or supersede existing offerings and produce lower revenues and lower profit margins. Both categories (lower revenues, lower profit margins) are correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 8 states multi-source components are subject to industry-wide shortages and significant commodity pricing fluctuations. The answer correctly identifies these two compounding risks beyond single-source dependency."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "chunk_id": "7754acfffb5f",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What specific U.S. court restriction was Apple subject to regarding App Store commissions or fees as described in its fiscal 2025 10-K Risk Factors?",
+        "answer": "Apple is currently subject to a court order preventing it from imposing any commission or fee on certain purchases that consumers make.",
+        "source_passage": "the Company has implemented changes to how developers communicate with consumers within apps on the U.S. storefront of the iOS and iPadOS App Store regarding alternative purchasing mechanisms and is currently subject to a court order preventing it from imposing any commission or fee on certain purchases that consumers make.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The court order restricting Apple's ability to charge commissions on certain purchases is stated directly in the excerpt."
+      },
+      {
+        "question": "What was the date of the U.S. District Court for the District of Columbia order related to Google's antitrust violation, as disclosed in Apple's fiscal 2025 10-K Risk Factors?",
+        "answer": "September 2, 2025.",
+        "source_passage": "on September 2, 2025, the U.S. District Court for the District of Columbia (\"D.C. District Court\") ordered certain remedies.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The date of the D.C. District Court remedies order is explicitly stated in the excerpt."
+      },
+      {
+        "question": "On what date was Google found to have violated U.S. antitrust laws, as disclosed in Apple's fiscal 2025 10-K Risk Factors?",
+        "answer": "August 5, 2024.",
+        "source_passage": "On August 5, 2024, Google was found to have violated U.S. antitrust laws.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The date of Google's antitrust violation finding is stated directly in the excerpt."
+      },
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, what types of changes did Apple implement in the EU to comply with the Digital Markets Act, and what regulatory body has challenged Apple's compliance plan?",
+        "answer": "Apple implemented new business terms and alternative fee structures for iOS and iPadOS apps, alternative methods of distribution for iOS and iPadOS apps, alternative payment processing for apps across Apple's operating systems, and additional tools and application programming interfaces for developers. The European Commission has challenged Apple's compliance plan.",
+        "source_passage": "the Company has implemented changes to iOS, iPadOS, the App Store and Safari® in the EU as it seeks to comply with the Digital Markets Act (\"DMA\"), including new business terms and alternative fee structures for iOS and iPadOS apps, alternative methods of distribution for iOS and iPadOS apps, alternative payment processing for apps across the Company's operating systems, and additional tools and application programming interfaces for developers. The Company has also continued to make changes to its compliance plan in response to feedback and engagement with the Commission. Although the Company's compliance plan is intended to address the DMA's obligations, it has been challenged by the Commission",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering requires combining multiple sentences to identify both the specific DMA compliance changes and the entity (the Commission) that challenged Apple's plan."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what DOJ remedy could materially adversely affect Apple's ability to earn revenue from licensing arrangements if a reversal on appeal leads to its implementation?",
+        "answer": "Remedies prohibiting Google from offering Apple commercial terms for search distribution could materially adversely affect Apple's ability to earn revenue from such licensing arrangements.",
+        "source_passage": "A reversal of the order on appeal could result in imposition of certain remedies initially proposed by the DOJ, such as those prohibiting Google from offering the Company commercial terms for search distribution. If implemented, these remedies could materially adversely affect the Company's ability to earn revenue from such licensing arrangements.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The excerpt explicitly identifies the specific DOJ remedy—prohibiting Google from offering Apple commercial search distribution terms—and its potential adverse revenue impact."
+      },
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, what are the specific markets alleged to be monopolized or subject to attempted monopolization in the U.S. civil antitrust lawsuits against the company?",
+        "answer": "The markets for \"performance smartphones\" and \"smartphones\" generally.",
+        "source_passage": "the Company is subject to civil antitrust lawsuits in the U.S. alleging monopolization or attempted monopolization in the markets for \"performance smartphones\" and \"smartphones\" generally in violation of U.S. antitrust laws.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The two specific market categories alleged in the U.S. civil antitrust lawsuits are directly named in the excerpt."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage appears verbatim in line 2: Apple is 'currently subject to a court order preventing it from imposing any commission or fee on certain purchases that consumers make.' The answer accurately restates this."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 5 states the D.C. District Court ordered certain remedies 'on September 2, 2025.' The answer correctly gives this date."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 5 states 'On August 5, 2024, Google was found to have violated U.S. antitrust laws.' The answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.95,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 3 lists all four DMA changes (new business terms/alternative fee structures, alternative distribution methods, alternative payment processing, additional tools/APIs) and states the compliance plan was 'challenged by the Commission.' Naming it the European Commission is correct in the DMA/EU context."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 5 states a reversal on appeal could impose DOJ-proposed remedies 'prohibiting Google from offering the Company commercial terms for search distribution,' which could adversely affect Apple's ability to earn revenue from such licensing arrangements. The answer matches."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 4 names the alleged markets as 'performance smartphones' and 'smartphones' generally in the U.S. civil antitrust lawsuits. The answer is exactly correct."
+    }
+  ]
+}

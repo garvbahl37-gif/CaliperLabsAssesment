@@ -1,0 +1,99 @@
+{
+  "chunk_id": "cfa19a6ff5ba",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What specific security measures does Apple deploy to help protect customers and the Company from unauthorized account access?",
+        "answer": "Apple deploys multifactor authentication, monitors its services and systems for unusual activity, and may freeze accounts under suspicious circumstances.",
+        "source_passage": "the Company deploys and makes available technologies like multifactor authentication, monitors its services and systems for unusual activity and may freeze accounts under suspicious circumstances, which, among other things, can result in the delay or loss of customer orders or impede customer access to the Company's products and services.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly lists the three protective measures Apple uses, making this a direct single-lookup fact extraction."
+      },
+      {
+        "question": "According to Apple's 10-K Risk Factors, what unintended consequence can result from Apple freezing customer accounts under suspicious circumstances?",
+        "answer": "Freezing accounts under suspicious circumstances can result in the delay or loss of customer orders or impede customer access to the Company's products and services.",
+        "source_passage": "may freeze accounts under suspicious circumstances, which, among other things, can result in the delay or loss of customer orders or impede customer access to the Company's products and services.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the negative side effects of the account-freeze security measure, requiring only a single lookup."
+      },
+      {
+        "question": "What risks does Apple's 10-K identify as potentially exacerbating patent and intellectual property infringement claims against the company?",
+        "answer": "The risks of novel claims may be exacerbated as new and emerging technologies, including machine learning and artificial intelligence, are further integrated into the Company's products and services.",
+        "source_passage": "These risks, and the risks of novel claims being attempted, may be exacerbated as new and emerging technologies, including machine learning and artificial intelligence, are further integrated into the Company's products and services.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The answer requires identifying the specific technology-related risk factor cited as an exacerbating condition for IP litigation, synthesizing two adjacent ideas in the same sentence."
+      },
+      {
+        "question": "In Apple's Risk Factors disclosure, what dual financial impact can litigation settlement agreements have on the Company's financial results?",
+        "answer": "Such agreements can significantly reduce the Company's revenue and increase the Company's cost of sales and operating expenses.",
+        "source_passage": "Such agreements can also significantly reduce the Company's revenue and increase the Company's cost of sales and operating expenses, materially adversely affecting the Company's business, results of operations, financial condition and stock price.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The answer requires combining two distinct financial effects — revenue reduction and cost increases — both stated in the same sentence, to characterize the full financial impact of settlement agreements."
+      },
+      {
+        "question": "How does Apple's 10-K describe the trend in the number and alleged magnitude of legal claims and government investigations involving the Company?",
+        "answer": "The number of claims, legal proceedings and government investigations involving the Company, and the alleged magnitude of such claims, proceedings and government investigations, has generally increased over time and may continue to increase.",
+        "source_passage": "The number of claims, legal proceedings and government investigations involving the Company, and the alleged magnitude of such claims, proceedings and government investigations, has generally increased over time and may continue to increase.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt contains a single explicit statement about the trend in legal proceedings, making it a direct fact extraction."
+      },
+      {
+        "question": "What categories of risk does Apple's 10-K identify as associated with new business strategies, commercial relationships, and acquisitions, beyond operational disruption?",
+        "answer": "Such endeavors may involve significant risks and uncertainties, including distraction of management from current operations, greater-than-expected liabilities and expenses, economic, political, legal and regulatory challenges associated with operating in new businesses, regions or countries, inadequate return on capital, potential impairment of tangible and intangible assets, and significant write-offs.",
+        "source_passage": "Such endeavors may involve significant risks and uncertainties, including distraction of management from current operations, greater-than-expected liabilities and expenses, economic, political, legal and regulatory challenges associated with operating in new businesses, regions or countries, inadequate return on capital, potential impairment of tangible and intangible assets, and significant write-offs.",
+        "question_type": "fact_extraction",
+        "difficulty": "hard",
+        "rationale": "The answer requires careful reading of a multi-item enumerated list spanning financial, operational, legal, and accounting risk categories, demanding close attention to distinguish each distinct risk cited."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage appears verbatim in the excerpt and lists exactly the three measures: multifactor authentication, monitoring for unusual activity, and freezing accounts under suspicious circumstances."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt states freezing accounts can result in delay or loss of customer orders or impede customer access to products and services, matching the answer exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt states the risks of novel claims may be exacerbated as new and emerging technologies, including machine learning and artificial intelligence, are integrated into products and services; answer is fully entailed."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt states settlement agreements can significantly reduce the Company's revenue and increase the Company's cost of sales and operating expenses, matching both financial effects in the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage appears verbatim in the excerpt describing the trend that claims, proceedings, and investigations have generally increased over time and may continue to increase."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The full enumerated list of risks (distraction of management, greater-than-expected liabilities, regulatory challenges, inadequate return on capital, impairment, write-offs) appears verbatim in the excerpt and the answer reproduces it accurately."
+    }
+  ]
+}

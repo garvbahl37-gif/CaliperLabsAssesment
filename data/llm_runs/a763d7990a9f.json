@@ -1,0 +1,99 @@
+{
+  "chunk_id": "a763d7990a9f",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "In fiscal year 2025, what was Apple's total net sales, and by what percentage did it change compared to fiscal year 2024?",
+        "answer": "Apple's total net sales in fiscal year 2025 were $416,161 million, representing a 6% increase compared to fiscal year 2024.",
+        "source_passage": "Total net sales | $ | 416,161 | 6 | % | $ | 391,035 | 2 | % | $ | 383,285",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt's segment net sales table directly states total net sales of $416,161 million for 2025 with a 6% change from 2024."
+      },
+      {
+        "question": "In fiscal year 2025, which of Apple's geographic segments had the largest year-over-year percentage increase in net sales?",
+        "answer": "Japan had the largest year-over-year percentage increase in net sales at 15% in fiscal year 2025.",
+        "source_passage": "Japan | 28,703 | 15 | % | 25,052 | 3 | % | 24,257",
+        "question_type": "comparison",
+        "difficulty": "easy",
+        "rationale": "Comparing all segment percentage changes in the table (Americas 7%, Europe 10%, Greater China -4%, Japan 15%, Rest of Asia Pacific 10%), Japan's 15% is the highest."
+      },
+      {
+        "question": "In fiscal year 2025, what was the dollar increase in Apple's Services net sales compared to fiscal year 2024?",
+        "answer": "Apple's Services net sales increased by $12,989 million in fiscal year 2025, from $96,169 million in 2024 to $109,158 million in 2025.",
+        "source_passage": "Services (1) | 109,158 | 14 | % | 96,169 | 13 | % | 85,200",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Subtracting 2024 Services net sales ($96,169 million) from 2025 Services net sales ($109,158 million) yields the dollar increase of $12,989 million."
+      },
+      {
+        "question": "In fiscal year 2025, what was the primary reason for the decline in Apple's Greater China net sales, and which product category partially offset that decline?",
+        "answer": "Greater China net sales decreased during 2025 compared to 2024 primarily due to lower net sales of iPhone, partially offset by higher net sales of Mac.",
+        "source_passage": "Greater China net sales decreased during 2025 compared to 2024 primarily due to lower net sales of iPhone, partially offset by higher net sales of Mac.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The answer requires reading the Greater China qualitative commentary to identify both the primary driver of decline (iPhone) and the partial offset (Mac)."
+      },
+      {
+        "question": "In fiscal year 2025, what was the combined net sales of Apple's Mac and iPad product categories?",
+        "answer": "The combined net sales of Mac and iPad in fiscal year 2025 were $61,731 million ($33,708 million for Mac plus $28,023 million for iPad).",
+        "source_passage": "Mac | 33,708 | 12 | % | 29,984 | 2 | % | 29,357\niPad | 28,023 | 5 | % | 26,694 | (6) | % | 28,300",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Adding Mac net sales ($33,708 million) and iPad net sales ($28,023 million) from the products table yields the combined total of $61,731 million."
+      },
+      {
+        "question": "Beginning in which quarter of 2025 were new U.S. Tariffs announced that could materially impact Apple's business, and what specific U.S. government investigation was initiated that is relevant to Apple's products?",
+        "answer": "New U.S. Tariffs were announced beginning in the second quarter of 2025. The U.S. Department of Commerce initiated an investigation under Section 232 of the Trade Expansion Act of 1962, as amended, into imports of semiconductors, semiconductor manufacturing equipment, and their derivative products, including downstream products that contain semiconductors.",
+        "source_passage": "Beginning in the second quarter of 2025, new U.S. Tariffs were announced, including additional tariffs on imports from China, India, Japan, South Korea, Taiwan, Vietnam and the EU, among others. In response, several countries have imposed, or threatened to impose, reciprocal tariffs on imports from the U.S. and other retaliatory measures. Various modifications to the U.S. Tariffs have been announced and further changes could be made in the future, which may include additional sector-based tariffs or other measures. For example, the U.S. Department of Commerce has initiated an investigation under Section 232 of the Trade Expansion Act of 1962, as amended, into, among other things, imports of semiconductors, semiconductor manufacturing equipment, and their derivative products, including downstream products that contain semiconductors.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "The answer requires combining two distinct facts from the tariffs section: when tariffs began (Q2 2025) and the specific Section 232 investigation details, which together describe the regulatory risk landscape affecting Apple."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 41 states Total net sales $416,161 million for 2025 with a 6% change, matching the answer exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Segment changes are Americas 7%, Europe 10%, Greater China -4%, Japan 15%, Rest of Asia Pacific 10%; Japan's 15% is the largest increase."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 109,158 - 96,169 = 12,989 million; both figures match line 66."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 50 states verbatim that Greater China decreased primarily due to lower iPhone sales, partially offset by higher Mac sales."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 33,708 + 28,023 = 61,731 million; Mac and iPad figures match lines 63-64."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 30 confirms new U.S. Tariffs began in the second quarter of 2025 and that the Department of Commerce initiated a Section 232 investigation into semiconductors and derivative products."
+    }
+  ]
+}

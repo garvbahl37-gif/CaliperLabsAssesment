@@ -1,0 +1,99 @@
+{
+  "chunk_id": "2ea67b07675a",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What was Apple's effective tax rate for fiscal year 2025 (ended September 27, 2025)?",
+        "answer": "15.6%",
+        "source_passage": "Effective tax rate | 15.6 | % | 24.1 | % | 14.7 | %",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The effective tax rate for 2025 is directly stated as 15.6% in the tax rate row of the table, with 2025 listed first."
+      },
+      {
+        "question": "By how much did Apple's total deferred tax assets (gross, before valuation allowance) increase from fiscal year 2024 to fiscal year 2025?",
+        "answer": "$3,544 million (from $34,873 million in 2024 to $38,417 million in 2025)",
+        "source_passage": "Total deferred tax assets | 38,417 | 34,873",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The gross total deferred tax assets were $38,417 million in 2025 and $34,873 million in 2024; subtracting gives an increase of $3,544 million."
+      },
+      {
+        "question": "As of September 27, 2025, what portion of Apple's gross unrecognized tax benefits of $23.2 billion would impact the effective tax rate if recognized?",
+        "answer": "$10.6 billion",
+        "source_passage": "As of September 27, 2025, the total amount of gross unrecognized tax benefits was $23.2 billion, of which $10.6 billion, if recognized, would impact the Company's effective tax rate.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states that $10.6 billion of the $23.2 billion in gross unrecognized tax benefits would impact the effective tax rate if recognized."
+      },
+      {
+        "question": "How did Apple's provision for income taxes change between fiscal year 2024 and fiscal year 2025, and what drove the difference in effective tax rates between those two years?",
+        "answer": "Apple's provision for income taxes decreased from $29,749 million in 2024 to $20,719 million in 2025, a reduction of $9,030 million. The effective tax rate fell from 24.1% in 2024 to 15.6% in 2025. The primary driver of the elevated 2024 rate was the Impact of the State Aid Decision, which added $10,246 million to the 2024 provision, compared to a reduction of $486 million in 2025.",
+        "source_passage": "Impact of the State Aid Decision | ( 486 ) | 10,246 | —\nProvision for income taxes | $ | 20,719 | $ | 29,749 | $ | 16,741\nEffective tax rate | 15.6 | % | 24.1 | % | 14.7 | %",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "Answering requires comparing provisions and effective tax rates across two years and linking the year-over-year swing to the State Aid Decision line item, which contributed $10,246 million in 2024 but only a $(486) million adjustment in 2025."
+      },
+      {
+        "question": "What was the net change in Apple's total lease liabilities from September 28, 2024 to September 27, 2025?",
+        "answer": "$1,290 million increase (from $12,430 million in 2024 to $13,720 million in 2025)",
+        "source_passage": "Total lease liabilities | $ | 13,720 | $ | 12,430",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Total lease liabilities are given as $13,720 million in 2025 and $12,430 million in 2024; the difference is $1,290 million, representing an increase."
+      },
+      {
+        "question": "As of September 27, 2025, how much of Apple's undiscounted operating lease liabilities are due after 2030 (i.e., 'Thereafter'), and what percentage does that represent of total undiscounted operating lease liabilities?",
+        "answer": "$5,956 million is due thereafter, representing approximately 40.4% of total undiscounted operating lease liabilities of $14,725 million ($5,956 / $14,725 ≈ 40.4%).",
+        "source_passage": "Thereafter | 5,956 | 801 | 6,757\nTotal undiscounted liabilities | 14,725 | 1,579 | 16,304",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The 'Thereafter' operating lease amount ($5,956 million) and the total undiscounted operating lease liabilities ($14,725 million) are both stated in the maturity table; dividing gives approximately 40.4%."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 5 lists 'Effective tax rate | 15.6 | % | 24.1 | % | 14.7 | %' with 2025 first; 15.6% is correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 18 'Total deferred tax assets | 38,417 | 34,873'; 38,417 - 34,873 = 3,544 increase, matches."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 32 states $23.2B gross unrecognized tax benefits of which $10.6B would impact effective tax rate; verbatim match."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Provision 29,749 (2024) to 20,719 (2025) = 9,030 decrease; rate 24.1% to 15.6%; State Aid Decision 10,246 (2024) vs (486) (2025) per lines 1-5. All correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 62 'Total lease liabilities | 13,720 | 12,430'; 13,720 - 12,430 = 1,290 increase, matches."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Thereafter operating = 5,956 (line 72), total undiscounted operating = 14,725 (line 73); 5,956/14,725 = 0.4045 ~= 40.4%, correct."
+    }
+  ]
+}

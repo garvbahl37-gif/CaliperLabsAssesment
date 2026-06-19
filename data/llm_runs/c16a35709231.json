@@ -1,0 +1,99 @@
+{
+  "chunk_id": "c16a35709231",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, what types of events can cause information technology system failures or network disruptions that the Company and its global supply chain are exposed to?",
+        "answer": "Natural disasters, accidents, power disruptions, telecommunications failures, acts of terrorism or war, computer viruses, physical or electronic break-ins, ransomware or other cybersecurity incidents, or other events or disruptions.",
+        "source_passage": "The Company and its global supply chain are dependent on complex information technology systems and are exposed to information technology system failures or network disruptions caused by natural disasters, accidents, power disruptions, telecommunications failures, acts of terrorism or war, computer viruses, physical or electronic break-ins, ransomware or other cybersecurity incidents, or other events or disruptions.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly lists the categories of events causing IT system failures, requiring only a straightforward lookup."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, why is Apple described as being at a relatively greater risk of being targeted by malicious attacks compared to companies in other industries?",
+        "answer": "Because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.",
+        "source_passage": "the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states the two reasons Apple faces elevated targeting risk, making this a direct single-fact lookup."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what specific business impacts can IT system failures or network disruptions have on Apple's operations?",
+        "answer": "They can prevent access to the Company's online services, interfere with customer transactions, or impede the manufacturing and shipping of the Company's products.",
+        "source_passage": "Such failures or disruptions can adversely impact the Company's business by, among other things, preventing access to the Company's online services, interfering with customer transactions or impeding the manufacturing and shipping of the Company's products.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt enumerates three specific operational impacts of IT failures, requiring only identification of these listed items."
+      },
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, under what circumstances can malicious attacks against the Company and its customers escalate?",
+        "answer": "Attacks against the Company and its customers can escalate during periods of geopolitical tensions or conflict.",
+        "source_passage": "attacks against the Company and its customers can escalate during periods of geopolitical tensions or conflict.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt contains a direct statement about when attacks can escalate, requiring a single fact extraction."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what measures has Apple invested in to enhance reseller sales, and why may these programs fail to deliver expected returns?",
+        "answer": "Apple has invested in staffing selected resellers' stores with Company employees and contractors, improving product placement displays, and developing and making digital marketing assets available to resellers. These programs may fail because purchasing preferences and behaviors of consumers may change, the financial condition of resellers could weaken, resellers could stop distributing the Company's products, or uncertainty regarding demand could cause resellers to reduce their ordering and marketing.",
+        "source_passage": "the Company has invested and will continue to invest in programs to enhance reseller sales, including staffing selected resellers' stores with Company employees and contractors, improving product placement displays, and developing and making digital marketing assets available to resellers. These programs can require a substantial investment while not assuring return or incremental sales. For example, the purchasing preferences and behaviors of consumers may change, the financial condition of resellers could weaken, resellers could stop distributing the Company's products, or uncertainty regarding demand for some or all of the Company's products could cause resellers to reduce their ordering and marketing of the Company's products",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering this question requires combining two distinct parts of the excerpt: the description of reseller investment programs and the separate enumeration of risk factors that could undermine those programs."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, how does Apple characterize the global trend in cyberattack frequency and sophistication, and what specific challenge does this trend pose for Apple?",
+        "answer": "Globally, attacks are expected to continue accelerating in both frequency and sophistication with increasing use by actors of tools and techniques that are designed to circumvent controls, avoid detection, and remove or obfuscate forensic evidence, which hinders the Company's ability to identify, investigate and recover from incidents.",
+        "source_passage": "Globally, attacks are expected to continue accelerating in both frequency and sophistication with increasing use by actors of tools and techniques that are designed to circumvent controls, avoid detection, and remove or obfuscate forensic evidence, all of which hinders the Company's ability to identify, investigate and recover from incidents.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "This question requires synthesizing the described trend in attack evolution with the resulting operational challenge it creates for Apple's incident response capabilities, connecting cause and effect across a complex sentence."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Source passage matches line 7 verbatim. Answer lists all event types (natural disasters, accidents, power disruptions, telecommunications failures, acts of terrorism or war, computer viruses, physical/electronic break-ins, ransomware/cybersecurity incidents) exactly as in the excerpt."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Source passage matches line 12. Answer correctly cites the two reasons: high profile and the value of the confidential information Apple creates, owns, manages, stores and processes."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Source passage matches line 7. Answer accurately states the three impacts: preventing access to online services, interfering with customer transactions, and impeding manufacturing and shipping of products."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Source passage matches line 11 verbatim. Answer correctly states attacks can escalate during periods of geopolitical tensions or conflict."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.95,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Source passage matches line 5. Answer correctly combines the investment measures (staffing resellers' stores, improving product placement displays, digital marketing assets) with the four enumerated risks that may cause failure to return value."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.95,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Source passage matches line 11. Answer accurately characterizes accelerating frequency/sophistication and the challenge to identify, investigate and recover from incidents; minor wording trim ('which' vs 'all of which') is immaterial."
+    }
+  ]
+}

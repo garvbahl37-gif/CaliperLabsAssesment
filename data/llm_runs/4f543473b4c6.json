@@ -1,0 +1,99 @@
+{
+  "chunk_id": "4f543473b4c6",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "In Apple's fiscal 2025 10-K, who holds overall responsibility for identifying, assessing and managing material risks from cybersecurity threats?",
+        "answer": "The Company's management, led by its Head of Corporate Information Security, has overall responsibility for identifying, assessing and managing any material risks from cybersecurity threats.",
+        "source_passage": "The Company's management, led by its Head of Corporate Information Security, has overall responsibility for identifying, assessing and managing any material risks from cybersecurity threats.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly names the Head of Corporate Information Security (under management) as holding overall responsibility for cybersecurity risk management."
+      },
+      {
+        "question": "How many years of experience in the cybersecurity industry does Apple's Head of Corporate Information Security have, as disclosed in the fiscal 2025 10-K?",
+        "answer": "The Head of Corporate Information Security has extensive knowledge and skills gained from over 25 years of experience in the cybersecurity industry.",
+        "source_passage": "The Company's Head of Corporate Information Security has extensive knowledge and skills gained from over 25 years of experience in the cybersecurity industry, including serving in leadership positions at other large technology companies and leading the Company's Information Security team since 2016.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states 'over 25 years of experience in the cybersecurity industry' as a qualification of the Head of Corporate Information Security."
+      },
+      {
+        "question": "Since what year has Apple's Head of Corporate Information Security been leading the Company's Information Security team, according to the fiscal 2025 10-K?",
+        "answer": "The Head of Corporate Information Security has been leading the Company's Information Security team since 2016.",
+        "source_passage": "leading the Company's Information Security team since 2016.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the Head of Corporate Information Security has been leading the team since 2016."
+      },
+      {
+        "question": "Which committee of Apple's Board of Directors assists the Board in the oversight and monitoring of cybersecurity matters, as described in the fiscal 2025 10-K?",
+        "answer": "The Audit and Finance Committee (referred to as the 'Audit Committee') of the Board assists the Board in the oversight and monitoring of cybersecurity matters.",
+        "source_passage": "The Audit Committee assists the Board in the oversight and monitoring of cybersecurity matters.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly names the Audit and Finance Committee (Audit Committee) as the body that assists the Board with cybersecurity oversight."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K, what dedicated team manages information security risks arising from the company's supplier relationships?",
+        "answer": "A dedicated Supplier Trust team manages information security risks the Company is exposed to through its supplier relationships.",
+        "source_passage": "A dedicated Supplier Trust team manages information security risks the Company is exposed to through its supplier relationships.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly names the Supplier Trust team as responsible for managing supplier-related information security risks."
+      },
+      {
+        "question": "Based on Apple's fiscal 2025 10-K disclosure, which executives does the Audit Committee regularly consult when reviewing the company's cybersecurity risks, and what is the process for communicating those discussions to the full Board?",
+        "answer": "The Audit Committee regularly reviews and discusses cybersecurity risks with management, including the Head of Corporate Information Security, the General Counsel, and the Heads of Compliance and Business Conduct, Business Assurance, and Internal Audit. The Chair of the Audit Committee then regularly reports the substance of such reviews and discussions to the Board, as necessary, and recommends actions as the Audit Committee deems appropriate.",
+        "source_passage": "The Audit Committee regularly reviews and discusses the Company's cybersecurity risks with management, including the Company's Head of Corporate Information Security, its General Counsel and the Heads of Compliance and Business Conduct, Business Assurance, and Internal Audit, and receives updates, as necessary, regarding cybersecurity incidents. The Chair of the Audit Committee regularly reports the substance of such reviews and discussions to the Board, as necessary, and recommends to the Board such actions as the Audit Committee deems appropriate.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering this question requires combining two distinct facts from separate sentences: the list of executives consulted and the reporting mechanism from the Audit Committee Chair to the full Board."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Passage matches excerpt line 1 verbatim; answer correctly identifies management led by the Head of Corporate Information Security as holding overall responsibility."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt line 1 states 'over 25 years of experience in the cybersecurity industry'; answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt line 1 states the Head has been leading the Information Security team since 2016; answer matches."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Passage matches line 3 verbatim; the answer's expansion to 'Audit and Finance Committee (Audit Committee)' is the defined name given in line 2, so it is correct and supported."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Passage matches line 2 verbatim; answer correctly names the dedicated Supplier Trust team."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Passage matches line 3 verbatim; answer accurately combines the list of executives (Head of Corporate Information Security, General Counsel, Heads of Compliance and Business Conduct, Business Assurance, and Internal Audit) with the Chair's reporting mechanism to the Board."
+    }
+  ]
+}

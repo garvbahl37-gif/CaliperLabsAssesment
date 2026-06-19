@@ -1,0 +1,99 @@
+{
+  "chunk_id": "2eac519b142a",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "As of October 17, 2025, how many shareholders of record did Apple Inc. have?",
+        "answer": "22,429 shareholders of record.",
+        "source_passage": "As of October 17, 2025, there were 22,429 shareholders of record.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The number of shareholders of record is stated explicitly in the excerpt."
+      },
+      {
+        "question": "What was the total number of shares (in thousands) Apple Inc. repurchased in the three months ended September 27, 2025?",
+        "answer": "89,498 thousand shares.",
+        "source_passage": "Total | 89,498 | $ | 99,779",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The total shares purchased across all three sub-periods is directly stated in the 'Total' row of the repurchase table."
+      },
+      {
+        "question": "What was the approximate total dollar value (in millions) of Apple Inc.'s share repurchases during the three months ended September 27, 2025?",
+        "answer": "$99,779 million.",
+        "source_passage": "Total | 89,498 | $ | 99,779",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The aggregate dollar value of shares repurchased is explicitly provided in the Total row of the repurchase activity table."
+      },
+      {
+        "question": "Between the June 29–August 2, 2025 and August 31–September 27, 2025 repurchase periods, by how much did Apple Inc.'s average price paid per share increase?",
+        "answer": "The average price paid per share increased by $28.13, from $210.43 to $238.56.",
+        "source_passage": "June 29, 2025 to August 2, 2025:\nOpen market and privately negotiated purchases | 33,265 | $ | 210.43 | 33,265\nAugust 31, 2025 to September 27, 2025:\nOpen market and privately negotiated purchases | 27,247 | $ | 238.56 | 27,247",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The answer requires subtracting the average price in the first period ($210.43) from the average price in the third period ($238.56), yielding a $28.13 increase."
+      },
+      {
+        "question": "How much of the May 2025 $100 billion share repurchase program announced by Apple Inc. had been utilized as of September 27, 2025?",
+        "answer": "$221 million of the May 2025 program had been utilized as of September 27, 2025.",
+        "source_passage": "On May 1, 2025, the Company announced an additional program to repurchase up to $100 billion of the Company's common stock. As of September 27, 2025, $221 million of the May 2025 program had been utilized.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The amount utilized under the May 2025 repurchase program is directly stated in the footnote to the repurchase activity table."
+      },
+      {
+        "question": "Based on the five-year cumulative total shareholder return comparison starting with $100 invested in September 2020, which index delivered the highest return by September 2025: Apple Inc., the S&P 500 Index, or the Dow Jones U.S. Technology Total Stock Market Index?",
+        "answer": "The Dow Jones U.S. Technology Total Stock Market Index delivered the highest return, growing to $287, compared to $234 for Apple Inc. and $217 for the S&P 500 Index.",
+        "source_passage": "Apple Inc. | $ | 100 | $ | 132 | $ | 136 | $ | 155 | $ | 208 | $ | 234\nS&P 500 Index | $ | 100 | $ | 137 | $ | 115 | $ | 136 | $ | 185 | $ | 217\nDow Jones U.S. Technology Total Stock Market Index | $ | 100 | $ | 147 | $ | 107 | $ | 147 | $ | 220 | $ | 287",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "Comparing the September 2025 ending values for all three benchmarks shows the Dow Jones U.S. Technology Total Stock Market Index at $287 was the highest, requiring a direct comparison of all three figures in the final column."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt line 3 states verbatim 'As of October 17, 2025, there were 22,429 shareholders of record.' which exactly matches the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The Total row (line 14) shows 89,498, and the table header (line 5) specifies share counts are in thousands, so 89,498 thousand shares is correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 5 specifies dollar values are in millions and the Total row (line 14) shows $99,779, so $99,779 million is correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 238.56 - 210.43 = 28.13. First period (Jun 29-Aug 2) price was $210.43 and last period (Aug 31-Sep 27) was $238.56, matching the stated $28.13 increase."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 16 states 'As of September 27, 2025, $221 million of the May 2025 program had been utilized.' which matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Final-column (Sep 2025) values: Apple $234, S&P 500 $217, Dow Jones US Tech $287 (lines 22-24). The Dow Jones index is highest at $287, matching the answer's figures and comparison."
+    }
+  ]
+}

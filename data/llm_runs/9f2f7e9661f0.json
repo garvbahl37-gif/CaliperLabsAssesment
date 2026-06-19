@@ -1,0 +1,99 @@
+{
+  "chunk_id": "9f2f7e9661f0",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal year 2025 10-K Risk Factors, what overarching category of risks covers volatility in net sales and gross margins, as well as exposure to foreign exchange rate changes?",
+        "answer": "Financial Risks",
+        "source_passage": "Financial Risks",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly labels the section header 'Financial Risks,' which directly covers the topics of net sales/gross margin volatility and foreign exchange exposure discussed below it."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K, what potential adverse consequence does the filing identify if the Company decides NOT to raise international pricing to offset a strengthening U.S. dollar?",
+        "answer": "It would adversely affect the U.S. dollar value of the gross margins the Company earns on foreign currency–denominated sales.",
+        "source_passage": "the Company may decide not to raise international pricing to offset the U.S. dollar's strengthening, which would adversely affect the U.S. dollar value of the gross margins the Company earns on foreign currency–denominated sales",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The answer requires reading the conditional clause about the Company's pricing decision and identifying the stated consequence for gross margins, combining two parts of the same sentence."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what specific risk does Apple identify regarding its product portfolio concentration that could significantly impact net sales and gross margins?",
+        "answer": "The Company generates a significant portion of its net sales from a single product category and a decline in demand for that product could significantly impact net sales and gross margins.",
+        "source_passage": "the Company generates a significant portion of its net sales from a single product category and a decline in demand for that product could significantly impact net sales and gross margins",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states this concentration risk in the final sentence of the net sales and gross margins risk paragraph."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K, what two currency-related effects does the weakening of foreign currencies relative to the U.S. dollar have on Apple's international business?",
+        "answer": "The weakening of foreign currencies relative to the U.S. dollar adversely affects the U.S. dollar value of the Company's foreign currency–denominated sales and earnings, and generally leads the Company to raise international pricing, potentially reducing demand for the Company's products.",
+        "source_passage": "The weakening of foreign currencies relative to the U.S. dollar adversely affects the U.S. dollar value of the Company's foreign currency–denominated sales and earnings, and generally leads the Company to raise international pricing, potentially reducing demand for the Company's products.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The answer requires identifying and combining two distinct effects stated in the same sentence: the adverse impact on U.S. dollar value of sales/earnings, and the pricing response that can reduce demand."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, which of the listed factors contributing to downward pressure on gross margins involves government-imposed trade measures?",
+        "answer": "The imposition of new or increased tariffs and other trade restrictions, their overall magnitude and duration, and retaliatory actions in response",
+        "source_passage": "the imposition of new or increased tariffs and other trade restrictions, their overall magnitude and duration, and retaliatory actions in response",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The answer requires scanning the list of gross margin pressure factors and identifying the one that specifically references government-imposed trade measures (tariffs and trade restrictions)."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K, what does the filing say about how Apple's gross margins vary across its business, and what are two dimensions of that variation explicitly named?",
+        "answer": "The Company's gross margins vary significantly across its products, services, geographic segments and distribution channels and can change over time.",
+        "source_passage": "The Company's gross margins vary significantly across its products, services, geographic segments and distribution channels and can change over time.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states that gross margins vary significantly across products, services, geographic segments, and distribution channels, providing the basis for any two-dimension comparison the question invites."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.95,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt contains the 'Financial Risks' header (line 3) which directly covers the net sales/gross margin volatility and foreign exchange rate subsections that follow."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage appears verbatim in the excerpt and the answer accurately states the consequence: it would adversely affect the U.S. dollar value of gross margins earned on foreign currency-denominated sales."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage appears verbatim in the final sentence of the net sales and gross margins paragraph and the answer matches it exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage appears verbatim in the excerpt and correctly identifies both effects: adverse impact on USD value of sales/earnings and a pricing response that can reduce demand."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.96,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The tariffs/trade restrictions factor appears verbatim in the list of gross margin pressure factors and is the government-imposed trade measure asked about."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.96,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage appears verbatim in the excerpt; gross margins vary across products, services, geographic segments and distribution channels, supporting the two named dimensions."
+    }
+  ]
+}

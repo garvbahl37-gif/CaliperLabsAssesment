@@ -1,0 +1,99 @@
+{
+  "chunk_id": "b68210041959",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "As of September 27, 2025, what was Apple's total term debt principal outstanding?",
+        "answer": "$91,281 million",
+        "source_passage": "Total term debt principal | 91,281 | 97,341",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The total term debt principal for fiscal 2025 is directly stated in the term debt summary table as $91,281 million."
+      },
+      {
+        "question": "In fiscal 2025, how many shares of Apple common stock were repurchased, and at what total cost?",
+        "answer": "402 million shares for $89.3 billion",
+        "source_passage": "During 2025, the Company repurchased 402 million shares of its common stock for $89.3 billion.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The share repurchase volume and dollar amount are explicitly stated in the Share Repurchase Program section of Note 10."
+      },
+      {
+        "question": "What was the change in Apple's total term debt principal between September 28, 2024 and September 27, 2025?",
+        "answer": "Apple's total term debt principal decreased by $6,060 million, from $97,341 million to $91,281 million.",
+        "source_passage": "Total term debt principal | 91,281 | 97,341",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The decrease is calculated by subtracting the 2025 principal ($91,281M) from the 2024 principal ($97,341M), yielding a reduction of $6,060M."
+      },
+      {
+        "question": "As of September 27, 2025, how much of Apple's future term debt principal was due after 2030 ('Thereafter'), and what percentage does that represent of the total term debt principal of $91,281 million?",
+        "answer": "$49,303 million was due thereafter, representing approximately 54.0% of total term debt principal ($49,303 / $91,281 ≈ 54.0%).",
+        "source_passage": "Thereafter | 49,303\nTotal term debt principal | $ | 91,281",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The 'Thereafter' amount of $49,303M is divided by the total principal of $91,281M and multiplied by 100 to arrive at approximately 54.0%."
+      },
+      {
+        "question": "How did the weighted-average interest rate on Apple's commercial paper and the weighted-average remaining lease term on its lease liabilities each change between September 28, 2024 and September 27, 2025?",
+        "answer": "The weighted-average interest rate on commercial paper decreased from 5.00% to 4.19%, and the weighted-average remaining lease term decreased from 10.3 years to 9.8 years.",
+        "source_passage": "The weighted-average remaining lease term related to the Company's lease liabilities as of September 27, 2025 and September 28, 2024 was 9.8 years and 10.3 years, respectively. The discount rate related to the Company's lease liabilities as of September 27, 2025 and September 28, 2024 was 3.4% and 3.1%, respectively.\nThe weighted-average interest rate of the Company's commercial paper was 4.19% and 5.00% as of September 27, 2025 and September 28, 2024, respectively.",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "Answering this question requires combining two separate facts from different notes — commercial paper interest rates from Note 9 and lease term data from Note 8 — and comparing each across the two fiscal year-end dates."
+      },
+      {
+        "question": "As of September 27, 2025, Apple had uncommenced lease obligations of $523 million. What were the expected commencement years and range of lease terms for these leases?",
+        "answer": "These leases are expected to commence between 2026 and 2027, with lease terms ranging from 1 year to 21 years.",
+        "source_passage": "As of September 27, 2025, the Company had $523 million of fixed payment obligations under additional leases, primarily for corporate facilities and retail space, that had not yet commenced. These leases are expected to commence between 2026 and 2027, with lease terms ranging from 1 year to 21 years.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "The question requires identifying the uncommenced lease amount and then combining it with two additional details — commencement window and lease term range — drawn from the same passage, testing careful reading of qualitative lease disclosure language."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 33 states 'Total term debt principal | 91,281 | 97,341' with 2025 in the first column, so $91,281 million is correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 56 states verbatim 'During 2025, the Company repurchased 402 million shares of its common stock for $89.3 billion.'"
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 97,341 - 91,281 = 6,060 decrease, matching the answer; both values come from line 33."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 49,303 / 91,281 = 0.5401 = 54.0%; Thereafter 49,303 (line 49) and total 91,281 (line 50) both appear in the excerpt."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 13 gives commercial paper rate 4.19% (2025) vs 5.00% (2024), a decrease; line 8 gives lease term 9.8 vs 10.3 years, a decrease. Both directions and values correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 9 states $523 million uncommenced lease obligations expected to commence between 2026 and 2027 with terms ranging from 1 year to 21 years, matching the answer exactly."
+    }
+  ]
+}

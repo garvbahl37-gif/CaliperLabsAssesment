@@ -1,0 +1,69 @@
+{
+  "chunk_id": "0d5fa342f633",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "Where can investors find Apple's SEC filings such as Annual Reports on Form 10-K free of charge, according to Apple's fiscal 2025 10-K filing?",
+        "answer": "Such reports are available free of charge at investor.apple.com/investor-relations/sec-filings/default.aspx when such reports are available on the SEC's website.",
+        "source_passage": "Such reports and other information filed by the Company with the SEC are available free of charge at investor.apple.com/investor-relations/sec-filings/default.aspx when such reports are available on the SEC's website.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the URL where SEC filings are available free of charge."
+      },
+      {
+        "question": "Which types of periodic reports does Apple file with the U.S. Securities and Exchange Commission, as listed in the Available Information section of its fiscal 2025 10-K?",
+        "answer": "The Company files Annual Reports on Form 10-K, Quarterly Reports on Form 10-Q, Current Reports on Form 8-K, and amendments to reports filed pursuant to Sections 13(a) and 15(d) of the Securities Exchange Act of 1934.",
+        "source_passage": "The Company's Annual Reports on Form 10-K, Quarterly Reports on Form 10-Q, Current Reports on Form 8-K, and amendments to reports filed pursuant to Sections 13(a) and 15(d) of the Securities Exchange Act of 1934, as amended (\"Exchange Act\"), are filed with the U.S. Securities and Exchange Commission (\"SEC\").",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly enumerates each report type Apple files with the SEC."
+      },
+      {
+        "question": "What types of information does Apple periodically provide to investors through its corporate website and investor relations website, as described in its fiscal 2025 10-K?",
+        "answer": "Apple provides press releases and other information about financial performance, information on corporate governance, and details related to the Company's annual meeting of shareholders.",
+        "source_passage": "This includes press releases and other information about financial performance, information on corporate governance, and details related to the Company's annual meeting of shareholders.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly lists the categories of information Apple provides on its corporate and investor relations websites."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K, what is the stated legal status of the information contained on the websites referenced within the filing?",
+        "answer": "The information contained on the websites referenced in this Form 10-K is not incorporated by reference into this filing, and the Company's references to website URLs are intended to be inactive textual references only.",
+        "source_passage": "The information contained on the websites referenced in this Form 10-K is not incorporated by reference into this filing. Further, the Company's references to website URLs are intended to be inactive textual references only.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The excerpt explicitly states that website content is not incorporated by reference and that URL references are inactive textual references, requiring the reader to combine two adjacent sentences."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The source passage appears verbatim in the excerpt and the answer correctly states the URL where SEC filings are available free of charge."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The source passage matches the excerpt exactly and the answer correctly enumerates all four report types (10-K, 10-Q, 8-K, and amendments under Sections 13(a) and 15(d) of the Exchange Act)."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The source passage appears verbatim and the answer correctly lists the three categories of information: press releases/financial performance, corporate governance, and annual meeting details."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The answer correctly combines two adjacent sentences from the excerpt stating website content is not incorporated by reference and URL references are inactive textual references only; both sentences are present verbatim."
+    }
+  ]
+}

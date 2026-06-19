@@ -1,0 +1,99 @@
+{
+  "chunk_id": "271683fc0390",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal year 2025 10-K Risk Factors, what characteristics define the global markets in which Apple's products and services compete?",
+        "answer": "The global markets for Apple's products and services are characterized by aggressive price competition, downward pressure on gross margins, continual improvement in product performance, and price sensitivity on the part of consumers and businesses, as well as frequent introduction of new products and services, short product life cycles, evolving industry standards, and rapid adoption of technological advancements.",
+        "source_passage": "These markets are characterized by aggressive price competition, downward pressure on gross margins, continual improvement in product performance, and price sensitivity on the part of consumers and businesses. These markets are further defined by frequent introduction of new products and services, short product life cycles, evolving industry standards, and rapid adoption of technological advancements.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly lists the market characteristics in two consecutive sentences, making this a straightforward fact extraction."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what does Apple identify as its market position in the global smartphone, personal computer, tablet and wearables markets?",
+        "answer": "Apple has a minority market share in the global smartphone, personal computer, tablet and wearables markets.",
+        "source_passage": "The Company has a minority market share in the global smartphone, personal computer, tablet and wearables markets, and some of the markets in which the Company competes have from time to time experienced little to no growth or contracted overall.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states Apple's minority market share position across those four product categories in a single sentence."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what are the two critical dependencies Apple identifies for competing successfully in global markets?",
+        "answer": "Apple identifies two critical dependencies for competing successfully: (1) the continuing and timely introduction of innovative new products, services and technologies to the marketplace, and (2) the effective protection and enforcement of its intellectual property rights.",
+        "source_passage": "The Company's ability to compete successfully depends heavily on ensuring the continuing and timely introduction of innovative new products, services and technologies to the marketplace.\n\nThe Company's ability to compete successfully also depends on the effective protection and enforcement of its intellectual property rights.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering correctly requires synthesizing two distinct statements from separate paragraphs that both address competitive success dependencies."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, how do many of Apple's competitors primarily seek to compete, and what intellectual property risk does this create?",
+        "answer": "Many of Apple's competitors seek to compete primarily through aggressive pricing and very low cost structures, and by imitating the Company's products and infringing on its intellectual property. This creates a risk that if competitors infringe on Apple's intellectual property, the Company's ability to maintain a competitive advantage could be materially adversely affected.",
+        "source_passage": "many of the Company's competitors seek to compete primarily through aggressive pricing and very low cost structures, and by imitating the Company's products and infringing on its intellectual property. Effective intellectual property protection is not consistently available in every country in which the Company operates. If the Company is unable to continue to develop and sell innovative new products with attractive margins or if competitors infringe on the Company's intellectual property, the Company's ability to maintain a competitive advantage could be materially adversely affected.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering requires combining the description of competitor behavior with the downstream IP risk consequence across adjacent sentences."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what competitive disadvantage does Apple face regarding intellectual property protection internationally?",
+        "answer": "Effective intellectual property protection is not consistently available in every country in which Apple operates.",
+        "source_passage": "Effective intellectual property protection is not consistently available in every country in which the Company operates.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt states this limitation in a single direct sentence, making it a straightforward factual lookup."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what risk does Apple identify if regulatory requirements, government investigations, or litigation affect its intellectual property rights?",
+        "answer": "Regulatory requirements, government investigations and litigation can force Apple to withdraw from, or modify its products and services for, certain countries, limit its ability to derive value from or to enjoin others from using its intellectual property rights, and may require the Company to share its innovations with competitors, any of which can have a negative impact on the Company's competitive advantage and materially adversely affect its business, results of operations, financial condition and stock price.",
+        "source_passage": "Regulatory requirements, government investigations and litigation can force the Company to withdraw from, or modify its products and services for, certain countries and limit its ability to derive value from, or to enjoin others from using, its intellectual property rights. Additionally, they may require the Company to share its innovations with competitors. Any of these outcomes can have a negative impact on the Company's competitive advantage and materially adversely affect its business, results of operations, financial condition and stock price.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "A complete answer requires identifying all three potential regulatory/litigation consequences and their combined adverse effects, synthesizing three consecutive sentences in the excerpt."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Source passage matches line 3 verbatim and the answer faithfully lists all eight market characteristics from the two consecutive sentences."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 7 explicitly states Apple has a minority market share in the global smartphone, personal computer, tablet and wearables markets; answer is exact."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Both cited statements appear (lines 4 and 5): competing successfully depends on timely introduction of innovative products and on effective protection/enforcement of IP rights; synthesis is correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 6 states competitors compete via aggressive pricing/low cost structures and by imitating products/infringing IP, and that infringement could materially adversely affect competitive advantage; answer correctly combines these."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Sentence appears verbatim in line 6: effective IP protection is not consistently available in every country in which the Company operates."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Source matches line 5 verbatim; answer captures all three regulatory/litigation consequences (withdraw/modify, limit IP value/enjoin, share innovations) and the combined adverse effects."
+    }
+  ]
+}

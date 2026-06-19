@@ -1,0 +1,99 @@
+{
+  "chunk_id": "50290def0b6b",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "In Apple's fiscal year 2025 10-K, how much did the company pay for income taxes (net) in each of fiscal years 2025, 2024, and 2023?",
+        "answer": "Apple paid $43,369 million in fiscal 2025, $26,102 million in fiscal 2024, and $18,679 million in fiscal 2023 in net cash taxes.",
+        "source_passage": "Cash paid for income taxes, net | $ | 43,369 | $ | 26,102 | $ | 18,679",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The three figures are stated directly in the supplemental cash flow disclosure row for cash paid for income taxes, net."
+      },
+      {
+        "question": "By how much did Apple's net cash paid for income taxes increase from fiscal year 2024 to fiscal year 2025?",
+        "answer": "Net cash paid for income taxes increased by $17,267 million (from $26,102 million in fiscal 2024 to $43,369 million in fiscal 2025).",
+        "source_passage": "Cash paid for income taxes, net | $ | 43,369 | $ | 26,102 | $ | 18,679",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Subtracting the fiscal 2024 figure ($26,102M) from the fiscal 2025 figure ($43,369M) yields the year-over-year increase of $17,267M."
+      },
+      {
+        "question": "How many weeks did Apple's fiscal years 2025 and 2024 each span, and how did that differ from fiscal year 2023?",
+        "answer": "Apple's fiscal years 2025 and 2024 each spanned 52 weeks, whereas fiscal year 2023 spanned 53 weeks.",
+        "source_passage": "The Company's fiscal years 2025 and 2024 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks.",
+        "question_type": "comparison",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the week counts for all three fiscal years, making a straightforward comparison possible."
+      },
+      {
+        "question": "What accounting standard did Apple adopt beginning with its 2025 annual reporting period, and what transition method was used?",
+        "answer": "Apple adopted FASB's ASU No. 2023-07, Segment Reporting (Topic 280): Improvements to Reportable Segment Disclosures, using a retrospective transition method.",
+        "source_passage": "Beginning with the 2025 annual reporting period, the Company adopted the FASB's ASU No. 2023-07, Segment Reporting (Topic 280): Improvements to Reportable Segment Disclosures (\"ASU 2023-07\"), which requires the Company to disclose segment expenses that are significant and regularly provided to the Company's chief operating decision maker (\"CODM\"). In addition, ASU 2023-07 requires the Company to disclose the title and position of its CODM and how the CODM uses segment profit or loss information in assessing segment performance and deciding how to allocate resources. The Company adopted ASU 2023-07 using a retrospective transition method.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly names the standard, its topic, and the retrospective transition method used for adoption."
+      },
+      {
+        "question": "What method does Apple use to measure inventories, and how does it determine the cost of marketable securities sold?",
+        "answer": "Apple measures inventories using the first-in, first-out method, and determines the cost of securities sold using the specific identification method.",
+        "source_passage": "The cost of securities sold is determined using the specific identification method.\nInventories are measured using the first-in, first-out method.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering the question requires combining two separate accounting policy disclosures from different paragraphs of the excerpt."
+      },
+      {
+        "question": "What does Apple's 10-K state about the timing threshold used to classify an investment as a cash equivalent?",
+        "answer": "All highly liquid investments with maturities of three months or less at the date of purchase are treated as cash equivalents.",
+        "source_passage": "All highly liquid investments with maturities of three months or less at the date of purchase are treated as cash equivalents.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt states the three-month maturity threshold for cash equivalents directly in the Cash Equivalents accounting policy paragraph."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 3 states 'Cash paid for income taxes, net | $ | 43,369 | $ | 26,102 | $ | 18,679', matching the answer's FY2025/2024/2023 figures exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 43,369 - 26,102 = 17,267M increase, which matches the answer exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 13 states fiscal years 2025 and 2024 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks, matching the answer verbatim."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 16 confirms adoption of ASU No. 2023-07, Segment Reporting (Topic 280), using a retrospective transition method, fully entailing the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 28 states inventories use FIFO and line 26 states cost of securities sold uses specific identification method, supporting both parts of the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 22 states all highly liquid investments with maturities of three months or less at the date of purchase are treated as cash equivalents, matching the answer verbatim."
+    }
+  ]
+}

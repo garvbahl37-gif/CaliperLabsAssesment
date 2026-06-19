@@ -1,0 +1,99 @@
+{
+  "chunk_id": "d04536b100c7",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "As of September 27, 2025, how much of Apple's non-current marketable securities were held in escrow and restricted from general use, and what obligation were they designated to settle?",
+        "answer": "$13.2 billion was held in escrow and restricted from general use, designated to settle Apple's obligation related to the State Aid Decision.",
+        "source_passage": "arketable securities included $13.2 billion held in escrow and restricted from general use. These restricted marketable securities were designated to settle the Company's obligation related to the State Aid Decision (refer to Note 7, \"Income Taxes\").",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the dollar amount held in escrow and explicitly names the obligation it was designated to settle."
+      },
+      {
+        "question": "As of September 27, 2025, what percentage of Apple's non-current mortgage- and asset-backed securities had maturities greater than 10 years?",
+        "answer": "73% of Apple's non-current mortgage- and asset-backed securities had maturities greater than 10 years as of September 27, 2025.",
+        "source_passage": "As of September 27, 2025, 13% of the Company's non-current mortgage- and asset-backed securities had maturities between 1 and 5 years, 14% between 5 and 10 years, and 73% greater than 10 years.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the maturity distribution for mortgage- and asset-backed securities, with 73% having maturities greater than 10 years."
+      },
+      {
+        "question": "As of September 27, 2025, what was the combined percentage of Apple's non-current marketable debt securities (other than mortgage- and asset-backed securities) that had maturities of 5 years or less?",
+        "answer": "80% of Apple's non-current marketable debt securities other than mortgage- and asset-backed securities had maturities between 1 and 5 years as of September 27, 2025, which is the only stated bucket at or below 5 years.",
+        "source_passage": "As of September 27, 2025, 80% of the Company's non-current marketable debt securities other than mortgage- and asset-backed securities had maturities between 1 and 5 years, 15% between 5 and 10 years, and 5% greater than 10 years.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states that 80% of the relevant securities had maturities between 1 and 5 years, which is the only disclosed bucket at or below 5 years."
+      },
+      {
+        "question": "As of September 27, 2025, what was the change in notional amount of Apple's foreign exchange contracts designated as accounting hedges compared to September 28, 2024?",
+        "answer": "The notional amount decreased by $1,422 million, from $64,069 million in 2024 to $62,647 million in 2025.",
+        "source_passage": "Derivative instruments designated as accounting hedges:\nForeign exchange contracts | $ | 62,647 | $ | 64,069",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The answer requires subtracting the 2025 notional amount ($62,647M) from the 2024 notional amount ($64,069M) to compute the year-over-year change of $1,422M."
+      },
+      {
+        "question": "As of September 27, 2025, how did the notional amount of Apple's foreign exchange contracts not designated as accounting hedges compare to those designated as accounting hedges?",
+        "answer": "Apple's foreign exchange contracts not designated as accounting hedges had a notional amount of $109,079 million, which was $46,432 million higher than the $62,647 million for those designated as accounting hedges as of September 27, 2025.",
+        "source_passage": "Derivative instruments designated as accounting hedges:\nForeign exchange contracts | $ | 62,647 | $ | 64,069\nInterest rate contracts | $ | 12,875 | $ | 14,575\nDerivative instruments not designated as accounting hedges:\nForeign exchange contracts | $ | 109,079 | $ | 91,493",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "The answer requires comparing the two foreign exchange contract notional amounts from the same table and computing the difference ($109,079M minus $62,647M = $46,432M)."
+      },
+      {
+        "question": "As of September 27, 2025, what was the maximum length of time over which Apple was hedging its exposure to the variability in future cash flows for term debt-related foreign currency transactions, and what instruments may be used for this purpose?",
+        "answer": "The maximum length of time was 17 years. Apple may use forwards, cross-currency swaps or other instruments, designated as either cash flow or fair value hedges, to protect foreign currency-denominated term debt or marketable securities from fluctuations in foreign exchange rates.",
+        "source_passage": "To protect the Company's foreign currency–denominated term debt or marketable securities from fluctuations in foreign exchange rates, the Company may use forwards, cross-currency swaps or other instruments. The Company designates these instruments as either cash flow or fair value hedges. As of September 27, 2025, the maximum length of time over which the Company is hedging its exposure to the variability in future cash flows for term debt–related foreign currency transactions is 17 years.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The answer requires combining two related facts from adjacent sentences: the types of instruments used and the maximum hedging horizon of 17 years for term debt-related foreign currency transactions."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt line 1 states $13.2 billion was held in escrow and restricted from general use, designated to settle the obligation related to the State Aid Decision; answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt states 73% of non-current mortgage- and asset-backed securities had maturities greater than 10 years as of September 27, 2025; answer matches."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt states 80% of these securities had maturities between 1 and 5 years; the answer correctly identifies this as the only disclosed bucket at or below 5 years."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 64,069 (2024) minus 62,647 (2025) = 1,422 million decrease; both notional values and the computed change are correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 109,079 minus 62,647 = 46,432 million; both notional values from the table and the difference are correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt line 14 states the maximum hedging horizon for term debt-related foreign currency transactions is 17 years and lists forwards, cross-currency swaps or other instruments designated as cash flow or fair value hedges; answer matches."
+    }
+  ]
+}

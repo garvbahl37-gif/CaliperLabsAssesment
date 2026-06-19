@@ -1,0 +1,99 @@
+{
+  "chunk_id": "46e0030176ac",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What was Apple's total net sales for fiscal year 2025 (year ended September 27, 2025)?",
+        "answer": "$416,161 million",
+        "source_passage": "Total net sales | 416,161 | 391,035 | 383,285",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The Consolidated Statements of Operations directly states total net sales of $416,161 million for the year ended September 27, 2025."
+      },
+      {
+        "question": "By how many dollars did Apple's Services revenue grow from fiscal year 2024 to fiscal year 2025?",
+        "answer": "$12,989 million (from $96,169 million in fiscal 2024 to $109,158 million in fiscal 2025)",
+        "source_passage": "Services | 109,158 | 96,169 | 85,200",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Subtracting fiscal 2024 Services revenue ($96,169M) from fiscal 2025 Services revenue ($109,158M) yields growth of $12,989 million."
+      },
+      {
+        "question": "What was Apple's gross margin percentage (gross margin as a percentage of total net sales) for fiscal year 2025?",
+        "answer": "Approximately 46.9% ($195,201 million gross margin divided by $416,161 million total net sales)",
+        "source_passage": "Gross margin | 195,201 | 180,683 | 169,148",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Dividing fiscal 2025 gross margin ($195,201M) by total net sales ($416,161M) and multiplying by 100 gives approximately 46.9%."
+      },
+      {
+        "question": "How did Apple's net income in fiscal year 2025 compare to fiscal year 2024, and what was the year-over-year increase?",
+        "answer": "Apple's net income increased from $93,736 million in fiscal 2024 to $112,010 million in fiscal 2025, an increase of $18,274 million.",
+        "source_passage": "Net income | $ | 112,010 | $ | 93,736 | $ | 96,995",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "The Consolidated Statements of Operations shows net income for both years, and subtracting FY2024 from FY2025 gives the year-over-year increase of $18,274 million."
+      },
+      {
+        "question": "As of September 27, 2025, what were Apple's total assets and total shareholders' equity, and what does this imply about total liabilities?",
+        "answer": "Total assets were $359,241 million and total shareholders' equity was $73,733 million, implying total liabilities of $285,508 million (which the balance sheet confirms).",
+        "source_passage": "Total assets | $ | 359,241 | $ | 364,980",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "Answering requires combining total assets ($359,241M) and total shareholders' equity ($73,733M) from the balance sheet and applying the accounting equation (Assets = Liabilities + Equity) to derive implied liabilities, which is confirmed by the stated total liabilities of $285,508M."
+      },
+      {
+        "question": "What was the change in Apple's diluted earnings per share from fiscal year 2024 to fiscal year 2025?",
+        "answer": "Diluted EPS increased from $6.08 in fiscal 2024 to $7.46 in fiscal 2025, an increase of $1.38 per share.",
+        "source_passage": "Diluted | $ | 7.46 | $ | 6.08 | $ | 6.13",
+        "question_type": "comparison",
+        "difficulty": "easy",
+        "rationale": "The Consolidated Statements of Operations directly provides diluted EPS for both years, and subtracting FY2024 ($6.08) from FY2025 ($7.46) gives the increase of $1.38."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 21 states 'Total net sales | 416,161 | 391,035 | 383,285'; the FY2025 figure of $416,161 million matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 20 gives Services 109,158 (FY2025) and 96,169 (FY2024). 109,158 - 96,169 = 12,989, matching the stated $12,989 million growth."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Gross margin 195,201 (line 26) / total net sales 416,161 (line 21) = 0.4690 = 46.9%, matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 35 shows net income 112,010 (FY2025) and 93,736 (FY2024). 112,010 - 93,736 = 18,274, matching the stated increase."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Total assets 359,241 (line 86) minus total shareholders' equity 73,733 (line 105) = 285,508, which matches total liabilities stated on line 99."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 38 shows diluted EPS 7.46 (FY2025) and 6.08 (FY2024). 7.46 - 6.08 = 1.38, matching the stated increase."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Pipeline cache (live-API response cache; reproducible, not needed in git)
+.cache/
+
+# Regenerable intermediates (recreated deterministically from the raw filing)
+data/chunks/txt/
+data/llm_runs/raw/
+
+# Committed on purpose (kept so the sample dataset reproduces offline):
+#   data/raw/*.htm           -> the real 10-K source
+#   data/chunks/*.json       -> chunk manifest
+#   data/llm_runs/*.json     -> captured generation+verification (replay inputs)
+#   output/*                 -> the shipped sample dataset
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets - never commit API keys or tokens
+.env
+*.key
+*.pat

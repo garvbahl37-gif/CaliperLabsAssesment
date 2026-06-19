@@ -1,0 +1,99 @@
+{
+  "chunk_id": "ef88950bc59b",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "In fiscal 2025, what percentage of Apple Inc.'s total net sales came through indirect distribution channels?",
+        "answer": "60%",
+        "source_passage": "During 2025, the Company's net sales through its direct and indirect distribution channels accounted for 40% and 60%, respectively, of total net sales.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states that indirect channels accounted for 60% of total net sales in 2025."
+      },
+      {
+        "question": "In fiscal 2025, what percentage of Apple Inc.'s total net sales came through direct distribution channels?",
+        "answer": "40%",
+        "source_passage": "During 2025, the Company's net sales through its direct and indirect distribution channels accounted for 40% and 60%, respectively, of total net sales.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states direct channels accounted for 40% of total net sales in 2025."
+      },
+      {
+        "question": "In fiscal 2025, how much larger was Apple Inc.'s indirect distribution channel share compared to its direct channel share, expressed as a percentage-point difference?",
+        "answer": "20 percentage points (60% indirect minus 40% direct)",
+        "source_passage": "During 2025, the Company's net sales through its direct and indirect distribution channels accounted for 40% and 60%, respectively, of total net sales.",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Subtracting the direct share (40%) from the indirect share (60%) yields a 20 percentage-point gap, requiring simple arithmetic on two figures in the excerpt."
+      },
+      {
+        "question": "Which five reportable segments does Apple Inc. use to manage its business on a geographic basis?",
+        "answer": "The Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+        "source_passage": "The Company's reportable segments consist of the Americas, Europe, Greater China, Japan and Rest of Asia Pacific.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt lists all five reportable geographic segments explicitly in a single sentence."
+      },
+      {
+        "question": "According to Apple Inc.'s business description, which countries and territories are included in the Greater China reportable segment?",
+        "answer": "China mainland, Hong Kong and Taiwan.",
+        "source_passage": "Greater China includes China mainland, Hong Kong and Taiwan.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly enumerates the three territories that comprise the Greater China segment."
+      },
+      {
+        "question": "In Apple Inc.'s fiscal 2025 business description, what competitive pressures are described as characterizing the markets for the Company's products and services?",
+        "answer": "The markets are highly competitive and are characterized by aggressive price competition, downward pressure on gross margins, continual improvement in product performance, and price sensitivity on the part of consumers and businesses.",
+        "source_passage": "The markets for the Company's products and services are highly competitive and are characterized by aggressive price competition, downward pressure on gross margins, continual improvement in product performance, and price sensitivity on the part of consumers and businesses.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering fully requires identifying and combining all four distinct competitive characteristics stated across the sentence, rather than extracting a single fact."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 33 states indirect distribution channels accounted for 60% of total net sales in 2025; passage matches excerpt verbatim."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 33 states direct distribution channels accounted for 40% of total net sales in 2025; passage matches excerpt verbatim."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 60% indirect minus 40% direct = 20 percentage points. Arithmetic correct and figures appear in excerpt."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 30 lists the five reportable segments (Americas, Europe, Greater China, Japan, Rest of Asia Pacific) exactly as answered."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 30 states 'Greater China includes China mainland, Hong Kong and Taiwan'; passage and answer match the excerpt exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 36 contains the cited passage verbatim and the answer captures all four stated characteristics (aggressive price competition, downward pressure on gross margins, continual product performance improvement, price sensitivity)."
+    }
+  ]
+}

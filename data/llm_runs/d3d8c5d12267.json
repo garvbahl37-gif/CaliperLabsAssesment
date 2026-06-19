@@ -1,0 +1,84 @@
+{
+  "chunk_id": "d3d8c5d12267",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal year 2025 10-K Risk Factors, what are the three categories of harm that an industrial accident at a supplier or contract manufacturer could cause to Apple?",
+        "answer": "An industrial accident could result in serious injuries or loss of life, disruption to the Company's business, and harm to the Company's reputation.",
+        "source_passage": "an industrial accident could occur and could result in serious injuries or loss of life, disruption to the Company's business, and harm to the Company's reputation",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly lists three named consequences of an industrial accident, making this a straightforward single-lookup fact extraction."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what condition must Apple's suppliers satisfy with respect to workplace safety?",
+        "answer": "Apple's suppliers are required to maintain safe working environments and operations.",
+        "source_passage": "the Company's suppliers are required to maintain safe working environments and operations",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states the supplier safety requirement in a single clause, making it a direct fact extraction."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, which specific pandemic is cited as an example of a major public health issue that has adversely affected the company?",
+        "answer": "The COVID-19 pandemic is cited as a specific example.",
+        "source_passage": "Major public health issues, including pandemics such as the COVID-19 pandemic, have adversely affected, and could in the future materially adversely affect, the Company",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt names COVID-19 explicitly as the illustrative pandemic, making this a single-fact lookup."
+      },
+      {
+        "question": "According to Apple's fiscal year 2025 10-K Risk Factors, through what three specific channels can major public health issues such as pandemics materially adversely affect Apple?",
+        "answer": "Through their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company's operations, supply chain and sales and distribution channels.",
+        "source_passage": "due to their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company's operations, supply chain and sales and distribution channels, resulting in interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering correctly requires reading and combining all three enumerated impact channels described across the sentence, rather than extracting a single isolated fact."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what two downstream operational consequences are described as resulting from disruptions in Apple's operations, supply chain, and sales and distribution channels caused by major public health issues?",
+        "answer": "Interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services.",
+        "source_passage": "resulting in interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The excerpt specifies exactly two downstream consequences of the supply-chain disruptions; identifying both requires reading past the initial list of impact channels to the dependent clause."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt verbatim lists the three consequences of an industrial accident: serious injuries or loss of life, disruption to the Company's business, and harm to the Company's reputation."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt states suppliers 'are required to maintain safe working environments and operations,' matching the answer exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt explicitly cites 'pandemics such as the COVID-19 pandemic' as the example."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt enumerates exactly the three channels in the answer: impact on the global economy and demand; imposition of protective public safety measures; and disruptions in operations, supply chain and sales and distribution channels."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt states the disruptions result in 'interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services,' matching the two consequences given."
+    }
+  ]
+}

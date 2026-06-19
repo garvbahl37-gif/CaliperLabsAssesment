@@ -1,0 +1,99 @@
+{
+  "chunk_id": "93c951894acf",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal 2025 10-K, what does the Company design and develop for nearly its entire product solution?",
+        "answer": "The Company designs and develops nearly the entire solution for its products, including the hardware, operating system, numerous software applications and related services.",
+        "source_passage": "The Company designs and develops nearly the entire solution for its products, including the hardware, operating system, numerous software applications and related services.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states what Apple designs and develops for its products, making this a straightforward single-fact lookup."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Business section, what is Apple's stated market share position in global smartphone, personal computer, tablet, and wearables markets?",
+        "answer": "The Company has a minority market share in the global smartphone, personal computer, tablet and wearables markets.",
+        "source_passage": "The Company has a minority market share in the global smartphone, personal computer, tablet and wearables markets, and some of the markets in which the Company competes have from time to time experienced little to no growth or contracted overall.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states Apple holds a minority market share across these four global markets, requiring only a direct lookup."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K, what are the two methods through which competitors are described as intensifying competition related to integrated offerings?",
+        "answer": "Competitors are described as either imitating the Company's approach to providing components seamlessly within their offerings or working collaboratively to offer integrated solutions.",
+        "source_passage": "The Company also expects competition to intensify as competitors imitate the Company's approach to providing components seamlessly within their offerings or work collaboratively to offer integrated solutions.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "Answering correctly requires identifying and combining two distinct competitive dynamics mentioned in a single sentence about intensifying competition."
+      },
+      {
+        "question": "According to Apple's fiscal 2025 10-K Business section, what three activities does Apple use to expand the range of its offerings beyond internal R&D?",
+        "answer": "Apple uses licensing of intellectual property and acquisition of third-party businesses and technology, in addition to research and development, to expand the range of its offerings.",
+        "source_passage": "The Company continues to develop new technologies to enhance existing products and services, and to expand the range of its offerings through research and development (\"R&D\"), licensing of intellectual property and acquisition of third-party businesses and technology.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The question requires identifying all three explicit mechanisms listed in the R&D paragraph, demanding careful reading of a compound clause."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K, what two supply-side risks are described that could result from component suppliers' strategic decisions?",
+        "answer": "Component suppliers may decide to concentrate on the production of common components instead of components customized to meet the Company's requirements, and suppliers may also be subject to consolidation within a particular industry, both of which could limit the Company's ability to obtain sufficient quantities of components on commercially reasonable terms, or at all.",
+        "source_passage": "component suppliers may fail, be subject to consolidation within a particular industry, or decide to concentrate on the production of common components instead of components customized to meet the Company's requirements, further limiting the Company's ability to obtain sufficient quantities of components on commercially reasonable terms, or at all.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "Answering requires distinguishing supplier-strategic-decision risks (consolidation and shift to common components) from operational failure, then synthesizing their shared consequence for Apple's supply chain."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Business section, what competitive challenge specifically affects custom components when new products utilizing them are first introduced?",
+        "answer": "When a component or product uses new technologies, initial capacity constraints may exist until the suppliers' yields have matured or their manufacturing capacities have increased.",
+        "source_passage": "When a component or product uses new technologies, initial capacity constraints may exist until the suppliers' yields have matured or their manufacturing capacities have increased.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The question links Apple's use of custom components unique to new products with the specific supply constraint that arises at launch, requiring the reader to connect two adjacent facts in the Supply of Components section."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The source passage appears verbatim in line 3 of the excerpt, and the answer reproduces it exactly: hardware, operating system, numerous software applications and related services."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 4 states the Company has a minority market share in the global smartphone, personal computer, tablet and wearables markets; the answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 4 states competition will intensify as competitors imitate the Company's approach to providing components seamlessly OR work collaboratively to offer integrated solutions; the answer correctly captures both methods."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.96,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 11 lists R&D, licensing of intellectual property, and acquisition of third-party businesses and technology as ways to expand offerings; the answer correctly identifies all three."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.92,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 8 states suppliers may be subject to consolidation or decide to concentrate on common components instead of customized ones, both limiting the ability to obtain components on commercially reasonable terms; the answer correctly isolates the two strategic-decision risks and their shared consequence."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 8 contains the source passage verbatim about initial capacity constraints existing until suppliers' yields mature or manufacturing capacities increase when new technologies are used; the answer matches."
+    }
+  ]
+}

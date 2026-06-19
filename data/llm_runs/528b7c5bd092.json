@@ -1,0 +1,99 @@
+{
+  "chunk_id": "528b7c5bd092",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What transition method will Apple use to adopt ASU 2023-09, and in which quarter will it be adopted?",
+        "answer": "Apple will adopt ASU 2023-09 in its fourth quarter of 2026 using a prospective transition method.",
+        "source_passage": "The Company will adopt ASU 2023-09 in its fourth quarter of 2026 using a prospective transition method.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states both the quarter and the transition method for ASU 2023-09 adoption."
+      },
+      {
+        "question": "What does ASU 2023-09 require with respect to income taxes paid disclosure, as described in Apple's 10-K?",
+        "answer": "ASU 2023-09 requires income taxes paid disclosure by federal, state and foreign taxes, with further disaggregation required for significant individual jurisdictions.",
+        "source_passage": "s income taxes paid disclosure by federal, state and foreign taxes, with further disaggregation required for significant individual jurisdictions.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly describes the disclosure requirements introduced by ASU 2023-09 regarding income taxes paid."
+      },
+      {
+        "question": "On what basis does Apple's management form judgments about the carrying values of assets and liabilities in its financial statements?",
+        "answer": "Management bases its estimates on historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities.",
+        "source_passage": "Management bases its estimates on historical experience and on various other assumptions it believes to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the basis on which management forms its judgments about carrying values."
+      },
+      {
+        "question": "What conditions must both be met before Apple records a liability for legal proceedings and claims?",
+        "answer": "The Company records a liability when it is probable a loss has been incurred and the amount is reasonably estimable.",
+        "source_passage": "The Company records a liability when it is probable a loss has been incurred and the amount is reasonably estimable, the determination of which requires significant judgment.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "Answering requires identifying and combining two distinct conditions stated in the same sentence within the Legal and Other Contingencies section."
+      },
+      {
+        "question": "What types of complex laws does the evaluation of Apple's uncertain tax positions involve, as stated in its Critical Accounting Estimates section?",
+        "answer": "The evaluation involves significant judgment in the interpretation and application of GAAP and complex domestic and international tax laws, including the TCJA and the allocation of international taxation rights between countries.",
+        "source_passage": "The evaluation of the Company's uncertain tax positions involves significant judgment in the interpretation and application of GAAP and complex domestic and international tax laws, including the TCJA and the allocation of international taxation rights between countries.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The excerpt explicitly enumerates the types of laws involved, requiring the reader to identify all elements mentioned within the sentence."
+      },
+      {
+        "question": "Under what circumstances are Apple's tax reserves adjusted, and what potential consequence could arise if uncertain tax positions are resolved inconsistently with management's expectations?",
+        "answer": "Reserves are adjusted considering changing facts and circumstances, such as the closing of a tax examination. Resolution of these uncertainties in a manner inconsistent with management's expectations could have a material impact on the Company's financial condition and operating results.",
+        "source_passage": "Reserves are adjusted considering changing facts and circumstances, such as the closing of a tax examination. Resolution of these uncertainties in a manner inconsistent with management's expectations could have a material impact on the Company's financial condition and operating results.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "Answering requires combining two distinct facts from consecutive sentences: the trigger for reserve adjustments and the consequence of adverse resolution of tax uncertainties."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt line 1 states verbatim that the Company will adopt ASU 2023-09 in its fourth quarter of 2026 using a prospective transition method; both quarter and method match exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 1 describes income taxes paid disclosure by federal, state and foreign taxes with further disaggregation for significant individual jurisdictions; answer matches the text."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 4 states verbatim that management bases its estimates on historical experience and other reasonable assumptions forming the basis for judgments about carrying values of assets and liabilities."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 8 states the Company records a liability when it is probable a loss has been incurred and the amount is reasonably estimable; both conditions correctly identified."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 6 states the evaluation involves significant judgment in interpretation/application of GAAP and complex domestic and international tax laws, including the TCJA and allocation of international taxation rights; answer matches."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 6 states reserves are adjusted considering changing facts and circumstances such as closing of a tax examination, and that inconsistent resolution could have a material impact on financial condition and operating results; both facts entailed."
+    }
+  ]
+}

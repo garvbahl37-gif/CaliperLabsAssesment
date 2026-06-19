@@ -1,0 +1,99 @@
+{
+  "chunk_id": "165136f2ae88",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What opinion did Ernst & Young LLP express on Apple Inc.'s internal control over financial reporting as of September 27, 2025?",
+        "answer": "Ernst & Young expressed that Apple Inc. maintained, in all material respects, effective internal control over financial reporting as of September 27, 2025, based on the COSO criteria.",
+        "source_passage": "In our opinion, Apple Inc. (the \"Company\") maintained, in all material respects, effective internal control over financial reporting as of September 27, 2025, based on the COSO criteria.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The opinion is explicitly stated in a single sentence of the auditor's report on internal controls."
+      },
+      {
+        "question": "How long has Ernst & Young LLP served as Apple Inc.'s auditor, and since what year did that relationship begin?",
+        "answer": "Ernst & Young LLP has served as Apple Inc.'s auditor since 2009, as stated in the audit report signed October 31, 2025, implying a relationship of approximately 16 years at the time of the report.",
+        "source_passage": "We have served as the Company's auditor since 2009.",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The start year (2009) is directly stated, and computing the duration requires subtracting 2009 from the report date year of 2025, yielding approximately 16 years."
+      },
+      {
+        "question": "On what date did Ernst & Young LLP sign Apple Inc.'s audit reports for both the financial statements and the internal control over financial reporting for fiscal year 2025?",
+        "answer": "Ernst & Young LLP signed both audit reports on October 31, 2025.",
+        "source_passage": "October 31, 2025",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The date October 31, 2025 appears at the close of both the financial statement audit report and the internal control audit report in the excerpt."
+      },
+      {
+        "question": "According to Ernst & Young's audit report on Apple Inc.'s internal controls, what framework was used to evaluate the effectiveness of internal control over financial reporting as of September 27, 2025?",
+        "answer": "The evaluation was based on criteria established in Internal Control – Integrated Framework issued by the Committee of Sponsoring Organizations of the Treadway Commission (2013 framework), referred to as the COSO criteria.",
+        "source_passage": "based on criteria established in Internal Control – Integrated Framework issued by the Committee of Sponsoring Organizations of the Treadway Commission (2013 framework) (the \"COSO criteria\")",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The framework name, issuing body, version year, and abbreviation are all explicitly named in the first paragraph of the internal control opinion."
+      },
+      {
+        "question": "What inherent limitation of internal control over financial reporting is identified in Ernst & Young's audit report on Apple Inc. for fiscal year 2025, and what two future-period risks are cited?",
+        "answer": "The report identifies that because of inherent limitations, internal control over financial reporting may not prevent or detect misstatements. The two future-period risks cited are: (1) that controls may become inadequate because of changes in conditions, and (2) that the degree of compliance with the policies or procedures may deteriorate.",
+        "source_passage": "Because of its inherent limitations, internal control over financial reporting may not prevent or detect misstatements. Also, projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadequate because of changes in conditions, or that the degree of compliance with the policies or procedures may deteriorate.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "Answering requires combining the stated inherent limitation with two separately enumerated forward-looking risks drawn from adjacent sentences in the limitations paragraph."
+      },
+      {
+        "question": "In auditing Apple Inc.'s uncertain tax positions for fiscal year 2025, what specific resource did Ernst & Young involve beyond reading management's assumptions and reviewing communications with taxing authorities?",
+        "answer": "Ernst & Young involved their tax subject matter resources in assessing the technical merits of certain of the Company's tax positions based on their knowledge of relevant tax laws and experience with related taxing authorities.",
+        "source_passage": "We involved our tax subject matter resources in assessing the technical merits of certain of the Company's tax positions based on our knowledge of relevant tax laws and experience with related taxing authorities.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The use of specialized tax subject matter resources is explicitly called out as a distinct audit procedure beyond the other steps listed, requiring the reader to isolate it from the surrounding list of procedures."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage matches the excerpt verbatim; the answer correctly states the unqualified opinion that Apple maintained effective ICFR as of Sept 27, 2025 based on COSO criteria."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt states 'We have served as the Company's auditor since 2009' and report dated October 31, 2025; 2025 - 2009 = 16 years, matching the answer's approximately 16 years."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Both audit reports close with 'October 31, 2025' (line 9 for financial statements report and line 27 for ICFR report), supporting that both were signed that date."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited passage naming the COSO Internal Control - Integrated Framework (2013 framework) appears verbatim in the excerpt and fully supports the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage on inherent limitations and the two future-period risks (controls becoming inadequate due to changing conditions, and degree of compliance deteriorating) appears verbatim and is correctly enumerated in the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The excerpt states EY involved their tax subject matter resources in assessing the technical merits of certain tax positions based on knowledge of tax laws and experience with taxing authorities, matching the answer and passage verbatim."
+    }
+  ]
+}

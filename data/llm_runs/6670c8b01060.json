@@ -1,0 +1,99 @@
+{
+  "chunk_id": "6670c8b01060",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "As of September 27, 2025, what was Apple's total amount of unconditional purchase obligations with a remaining term in excess of one year?",
+        "answer": "$13,308 million",
+        "source_passage": "Total | $ | 13,308",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The total is explicitly stated in the purchase obligations table as $13,308 million."
+      },
+      {
+        "question": "In fiscal 2025, what was Apple's total net sales across all reportable segments?",
+        "answer": "$416,161 million",
+        "source_passage": "Net sales | $ | 178,353 | $ | 111,032 | $ | 64,377 | $ | 28,703 | $ | 33,696 | $ | — | $ | 416,161",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The total net sales figure for fiscal 2025 is directly stated in the segment information table as $416,161 million."
+      },
+      {
+        "question": "In fiscal 2025, by how much did Apple's total net sales grow compared to fiscal 2024, and what was the percentage growth?",
+        "answer": "Total net sales grew by $25,126 million, from $391,035 million in fiscal 2024 to $416,161 million in fiscal 2025, representing approximately 6.4% growth.",
+        "source_passage": "Net sales | $ | 178,353 | $ | 111,032 | $ | 64,377 | $ | 28,703 | $ | 33,696 | $ | — | $ | 416,161\n...Net sales | $ | 167,045 | $ | 101,328 | $ | 66,952 | $ | 25,052 | $ | 30,658 | $ | — | $ | 391,035",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Computing the year-over-year change requires subtracting the 2024 total ($391,035M) from the 2025 total ($416,161M) to get $25,126M, then dividing by $391,035M to get ~6.4% growth."
+      },
+      {
+        "question": "In fiscal 2025, which of Apple's geographic segments generated the highest net sales, and how did it compare to the segment with the second-highest net sales?",
+        "answer": "The Americas segment generated the highest net sales at $178,353 million, compared to Europe's $111,032 million — a difference of $67,321 million.",
+        "source_passage": "Net sales | $ | 178,353 | $ | 111,032 | $ | 64,377 | $ | 28,703 | $ | 33,696 | $ | — | $ | 416,161",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "Identifying the top two segments by net sales from the 2025 table and computing the difference between Americas ($178,353M) and Europe ($111,032M) requires both comparison and arithmetic."
+      },
+      {
+        "question": "In fiscal 2025, what was Apple's total operating income, and what was the corporate-level operating loss that was netted against the segments' combined operating income?",
+        "answer": "Apple's total operating income in fiscal 2025 was $133,050 million. The corporate-level operating loss was $(42,627) million, which was netted against the sum of the five geographic segments' operating income to arrive at the total.",
+        "source_passage": "Operating income/(loss) | $ | 72,480 | $ | 47,739 | $ | 26,917 | $ | 13,955 | $ | 14,586 | $ | ( 42,627 ) | $ | 133,050",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "Answering this requires identifying the total operating income, isolating the corporate loss figure from the same row, and understanding that the corporate column represents unallocated costs (R&D and G&A) not attributed to geographic segments."
+      },
+      {
+        "question": "In fiscal 2024, what was Apple's Greater China segment net sales, and how did it compare to fiscal 2025 Greater China net sales?",
+        "answer": "In fiscal 2024, Apple's Greater China segment net sales were $66,952 million. In fiscal 2025, Greater China net sales declined to $64,377 million, a decrease of $2,575 million year-over-year.",
+        "source_passage": "Net sales | $ | 167,045 | $ | 101,328 | $ | 66,952 | $ | 25,052 | $ | 30,658 | $ | — | $ | 391,035\n...Net sales | $ | 178,353 | $ | 111,032 | $ | 64,377 | $ | 28,703 | $ | 33,696 | $ | — | $ | 416,161",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "This requires reading Greater China net sales from both the 2024 and 2025 segment tables and computing the year-over-year decline of $2,575 million."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 9 states 'Total | $ | 13,308' for unconditional purchase obligations with remaining term over one year as of September 27, 2025. Exact match."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 26 shows 2025 total net sales of $416,161 million across all segments. Exact match."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Re-derived: 416,161 - 391,035 = 25,126; 25,126 / 391,035 = 0.06425 = ~6.4%. Both totals present (lines 26, 35). Correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Americas $178,353M is highest and Europe $111,032M second (line 26); difference 178,353 - 111,032 = 67,321M. Correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 31 confirms total operating income $133,050M and Corporate $(42,627)M. Corporate column contains R&D (line 28) and G&A (line 30), supporting the unallocated-costs explanation."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Greater China 2024 $66,952M (line 35) vs 2025 $64,377M (line 26); decline 66,952 - 64,377 = 2,575M. Correct."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "chunk_id": "82e47667de0b",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "As of September 27, 2025, what was Apple's RSU balance and weighted-average grant-date fair value per RSU?",
+        "answer": "As of September 27, 2025, Apple had 151,574 thousand RSUs outstanding with a weighted-average grant-date fair value of $189.75 per RSU.",
+        "source_passage": "Balance as of September 27, 2025 | 151,574 | $ | 189.75",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt's RSU activity table directly states the ending balance of 151,574 thousand RSUs and the corresponding weighted-average grant-date fair value of $189.75."
+      },
+      {
+        "question": "What was the total share-based compensation expense Apple recognized in fiscal 2025, and how does it compare to fiscal 2023?",
+        "answer": "Apple's share-based compensation expense was $12,863 million in fiscal 2025 versus $10,833 million in fiscal 2023, an increase of $2,030 million.",
+        "source_passage": "Share-based compensation expense | $ | 12,863 | $ | 11,688 | $ | 10,833",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "The share-based compensation table provides the 2025 and 2023 figures directly; computing the difference ($12,863 - $10,833 = $2,030 million) requires one arithmetic step."
+      },
+      {
+        "question": "In fiscal 2025, what was the net income tax benefit Apple recognized related to share-based compensation expense?",
+        "answer": "Apple recognized an income tax benefit of $3,602 million related to share-based compensation expense in fiscal 2025.",
+        "source_passage": "Income tax benefit related to share-based compensation expense | $ | ( 3,602 ) | $ | ( 3,350 ) | $ | ( 3,421 )",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The share-based compensation table directly reports the 2025 income tax benefit as $(3,602) million."
+      },
+      {
+        "question": "What was the total vesting-date fair value of Apple's RSUs in fiscal 2025, and how much did the company pay to taxing authorities for employees' tax obligations that year?",
+        "answer": "The total vesting-date fair value of RSUs in fiscal 2025 was $17.1 billion, and Apple paid $6.1 billion to taxing authorities for employees' tax obligations.",
+        "source_passage": "The total vesting-date fair value of RSUs was $17.1 billion, $15.8 billion and $15.9 billion for 2025, 2024 and 2023, respectively. The majority of RSUs that vested in 2025, 2024 and 2023 were net share settled such that the Company withheld shares with a value equivalent to the employees' obligation for the applicable income and other employment taxes, and remitted cash to the appropriate taxing authorities. Total payments to taxing authorities for employees' tax obligations were $6.1 billion in 2025 and $5.6 billion in both 2024 and 2023.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering requires combining two distinct facts from the same paragraph: the vesting-date fair value for 2025 and the corresponding tax payments to authorities."
+      },
+      {
+        "question": "What are Apple's total unconditional purchase obligations with a remaining term in excess of one year as of September 27, 2025, and what portion is due in fiscal 2026?",
+        "answer": "Apple's total unconditional purchase obligations were $13,308 million, of which $4,752 million is due in 2026.",
+        "source_passage": "2026 | $ | 4,752\n2027 | 3,708\n2028 | 1,981\n2029 | 1,306\n2030 | 788\nThereafter | 773\nTotal | $ | 13,308",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The answer combines two figures from the purchase obligations table: the 2026 payment of $4,752 million and the overall total of $13,308 million."
+      },
+      {
+        "question": "By how much did the weighted-average grant-date fair value per RSU for Apple's grants change from fiscal 2024 to fiscal 2025?",
+        "answer": "The weighted-average grant-date fair value per RSU granted increased by $52.90, from $173.78 in fiscal 2024 to $226.68 in fiscal 2025.",
+        "source_passage": "RSUs granted | 73,466 | $ | 226.68\n...The weighted-average grant-date fair value of RSUs granted in 2024 and 2023 was $173.78 and $150.87, respectively.",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "The 2025 grant fair value ($226.68) comes from the RSU activity table and the 2024 figure ($173.78) from the following sentence; subtracting them yields the $52.90 increase."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 17 of the RSU activity table states 'Balance as of September 27, 2025 | 151,574 | $ | 189.75', matching the answer exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 25 gives 12,863 (2025) and 10,833 (2023); 12,863 - 10,833 = 2,030 million, confirming the stated increase."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 26 reports income tax benefit of (3,602) for 2025, matching the answer's $3,602 million benefit."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 20 states vesting-date fair value of RSUs was $17.1 billion for 2025 and total tax-authority payments of $6.1 billion in 2025, both matching."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 34 shows 2026 = $4,752 and line 40 shows Total = $13,308 (in millions), matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "2025 grant FV $226.68 (line 14) minus 2024 grant FV $173.78 (line 19) = $52.90, confirming the stated increase."
+    }
+  ]
+}

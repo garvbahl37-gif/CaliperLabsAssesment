@@ -1,0 +1,99 @@
+{
+  "chunk_id": "6434e51b7871",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal 2025 10-K Risk Factors, what does the Company believe customer decisions to purchase its hardware products depend on in part?",
+        "answer": "The availability of third-party software applications and services.",
+        "source_passage": "The Company believes decisions by customers to purchase its hardware products depend in part on the availability of third-party software applications and services.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states that customer hardware purchase decisions depend in part on third-party software application and service availability."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, which competing platforms does Apple identify as alternatives that third-party developers may choose over Apple's ecosystem when assessing where to focus development efforts?",
+        "answer": "Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms.",
+        "source_passage": "the perceived benefits of creating software and services for the Company's products compared to competitors' platforms, such as Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The excerpt lists these specific competing platforms as alternatives that third-party developers weigh when deciding where to direct development resources, requiring identification of all named platforms."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what factors does the excerpt say developers may consider when deciding whether to create software for Apple's products versus competitors' platforms?",
+        "answer": "Factors such as the market position of the Company and its products, the anticipated revenue that may be generated, expected future growth of product sales, and the costs of developing such applications and services.",
+        "source_passage": "This analysis may be based on factors such as the market position of the Company and its products, the anticipated revenue that may be generated, expected future growth of product sales, and the costs of developing such applications and services.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The excerpt enumerates four specific factors developers weigh; the answer synthesizes all four from consecutive text in the passage."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what risk does the Company's minority market share in global smartphone, personal computer, tablet, and wearables markets pose for its software ecosystem?",
+        "answer": "Apple's minority market share can make developers less inclined to develop or upgrade software for the Company's products and more inclined to devote their resources to developing and upgrading software for competitors' products with larger market share, causing the availability and quality of applications for the Company's devices to suffer.",
+        "source_passage": "The Company's minority market share in the global smartphone, personal computer, tablet and wearables markets can make developers less inclined to develop or upgrade software for the Company's products and more inclined to devote their resources to developing and upgrading software for competitors' products with larger market share. When developers focus their efforts on these competing platforms, the availability and quality of applications for the Company's devices can suffer.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "Answering fully requires linking Apple's minority market share to developer incentive shifts and then to the downstream consequence of reduced application availability and quality, combining two consecutive sentences."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what risk does the Company identify related to its own internally produced digital content?",
+        "answer": "The Company's own digital content can be costly to produce due to intense and increasing competition for talent, content and subscribers, and may fail to appeal to the Company's customers.",
+        "source_passage": "The Company also produces its own digital content, which can be costly to produce due to intense and increasing competition for talent, content and subscribers, and may fail to appeal to the Company's customers.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states both cost and appeal risks associated with Apple's internally produced digital content in a single sentence."
+      },
+      {
+        "question": "In Apple's fiscal 2025 10-K Risk Factors, what specific location is cited as the primary concentration point for Apple's key personnel, and what challenge does this geographic concentration create?",
+        "answer": "Most of the Company's key personnel are located in Silicon Valley, where experienced personnel in the technology industry are in high demand and competition for their talents is intense, which can lead to increased costs as the Company seeks to offer competitive compensation to recruit and retain highly skilled employees.",
+        "source_passage": "Experienced personnel in the technology industry are in high demand and competition for their talents is intense, especially in Silicon Valley, where most of the Company's key personnel are located. Periods of intense competition for talent in particular fields can lead to increased costs as the Company seeks to offer competitive compensation to recruit and retain highly skilled employees.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "The answer requires combining the geographic concentration of key personnel in Silicon Valley with the resulting competitive talent market challenge and its cost implication, drawing from two consecutive sentences."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 4 states verbatim that customer decisions to purchase hardware depend in part on the availability of third-party software applications and services; answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 5 lists Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms; answer enumerates all named platforms correctly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 5 enumerates the four factors: market position, anticipated revenue, expected future growth of product sales, and costs of developing applications/services; answer captures all four verbatim."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 6 states minority market share makes developers less inclined to develop for Apple and more inclined toward competitors, and that availability/quality of apps can suffer; answer combines both sentences accurately."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 10 states the Company's own digital content can be costly to produce due to intense competition for talent, content and subscribers, and may fail to appeal to customers; answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 12 states most key personnel are located in Silicon Valley where competition for talent is intense, leading to increased costs to offer competitive compensation; answer combines both sentences accurately."
+    }
+  ]
+}

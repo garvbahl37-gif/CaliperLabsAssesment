@@ -1,0 +1,99 @@
+{
+  "chunk_id": "e94cadf0bda2",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What types of derivative instruments does Apple use to hedge against foreign exchange rate fluctuations?",
+        "answer": "Apple uses foreign currency forward and option contracts to hedge certain exposures to fluctuations in foreign exchange rates.",
+        "source_passage": "The Company uses derivative instruments, such as foreign currency forward and option contracts, to hedge certain exposures to fluctuations in foreign exchange rates.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly names the specific derivative instruments Apple employs for hedging, making this a straightforward single-fact lookup."
+      },
+      {
+        "question": "As of September 27, 2025, where were Apple's vendor non-trade receivables primarily concentrated geographically?",
+        "answer": "As of September 27, 2025, Apple's vendor non-trade receivables were concentrated among a few individual vendors located primarily in Asia.",
+        "source_passage": "As of September 27, 2025, the Company's vendor non-trade receivables were concentrated among a few individual vendors located primarily in Asia.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt states the geographic concentration of vendor non-trade receivables directly with an explicit date, requiring only a single lookup."
+      },
+      {
+        "question": "In what two foreign jurisdictions does Apple specifically note having subsidiaries organized for tax purposes, as disclosed in its fiscal 2025 10-K risk factors?",
+        "answer": "Apple specifically notes Ireland and Singapore as foreign jurisdictions where a number of its subsidiaries are organized.",
+        "source_passage": "The Company is subject to taxes in the U.S. and numerous foreign jurisdictions, including Ireland and Singapore, where a number of the Company's subsidiaries are organized.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly names Ireland and Singapore as the two foreign jurisdictions with Apple subsidiaries, requiring a direct single-fact extraction."
+      },
+      {
+        "question": "According to Apple's fiscal 2025 10-K risk factors, what are the two adverse outcomes that could result from a strengthening of foreign currencies relative to the U.S. dollar, despite that scenario being generally beneficial?",
+        "answer": "A strengthening of foreign currencies relative to the U.S. dollar could cause Apple to reduce international pricing or incur losses on its foreign currency derivative instruments, and could also increase the cost of product components denominated in those currencies, adversely affecting gross margins.",
+        "source_passage": "a strengthening of foreign currencies relative to the U.S. dollar, while generally beneficial to the Company's foreign currency–denominated sales and earnings, could cause the Company to reduce international pricing or incur losses on its foreign currency derivative instruments, thereby limiting the benefit. Additionally, strengthening of foreign currencies may increase the Company's cost of product components denominated in those currencies, thus adversely affecting gross margins.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering this requires combining two distinct consequences described in separate sentences — reduced pricing or derivative losses, and increased component costs — making it a multi-fact synthesis."
+      },
+      {
+        "question": "What limitation does Apple acknowledge regarding its use of hedging activities to manage foreign exchange rate risk?",
+        "answer": "Apple acknowledges that the use of hedging activities may not be effective to offset any, or more than a portion, of the adverse financial effects of unfavorable movements in foreign exchange rates over the limited time the hedges are in place.",
+        "source_passage": "The use of such hedging activities may not be effective to offset any, or more than a portion, of the adverse financial effects of unfavorable movements in foreign exchange rates over the limited time the hedges are in place.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "This requires careful reading of a qualified statement about hedging effectiveness, including understanding the nuance that hedges may cover none or only a portion of adverse effects, and that they are limited in duration."
+      },
+      {
+        "question": "What factors does Apple identify in its fiscal 2025 10-K as affecting the Company's effective tax rates?",
+        "answer": "Apple's effective tax rates are affected by changes in the mix of earnings in countries with differing statutory tax rates, changes in the valuation of deferred tax assets and liabilities, the introduction of new taxes, and changes in tax laws or their interpretation.",
+        "source_passage": "The Company's effective tax rates are affected by changes in the mix of earnings in countries with differing statutory tax rates, changes in the valuation of deferred tax assets and liabilities, the introduction of new taxes, and changes in tax laws or their interpretation.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering correctly requires identifying and enumerating all four distinct factors listed in the excerpt, demanding careful reading across the full sentence rather than a single-point lookup."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 4 states verbatim that the Company uses 'foreign currency forward and option contracts' to hedge exposures to FX fluctuations; the answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 8 states verbatim that as of September 27, 2025 vendor non-trade receivables were concentrated among a few individual vendors located primarily in Asia; the answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 10 explicitly names Ireland and Singapore as foreign jurisdictions where a number of subsidiaries are organized; the answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 3 supports both outcomes: reducing international pricing or incurring derivative losses, and increased cost of product components adversely affecting gross margins; the answer fully entails the passage."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 4 states verbatim that hedging may not be effective to offset any, or more than a portion, of adverse FX effects over the limited time hedges are in place; the answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 10 lists all four factors affecting effective tax rates (mix of earnings across differing statutory rates, valuation of deferred tax assets/liabilities, introduction of new taxes, changes in tax laws or interpretation); the answer enumerates them correctly."
+    }
+  ]
+}

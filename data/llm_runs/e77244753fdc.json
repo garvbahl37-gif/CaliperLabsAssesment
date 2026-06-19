@@ -1,0 +1,99 @@
+{
+  "chunk_id": "e77244753fdc",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "As of September 27, 2025, how many full-time equivalent employees did Apple Inc. have?",
+        "answer": "Approximately 166,000 full-time equivalent employees.",
+        "source_passage": "As of September 27, 2025, the Company had approximately 166,000 full-time equivalent employees.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The employee count is stated directly and explicitly in the Human Capital section of the excerpt."
+      },
+      {
+        "question": "In Apple Inc.'s 10-K for fiscal year 2025, which fiscal quarter has historically experienced the highest net sales, and what is the primary reason cited?",
+        "answer": "The first quarter has historically experienced higher net sales compared to other quarters, due in part to seasonal holiday demand.",
+        "source_passage": "The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states that Q1 is the highest-sales quarter and attributes this to seasonal holiday demand."
+      },
+      {
+        "question": "According to Apple Inc.'s fiscal 2025 10-K, what types of intellectual property rights does the Company hold, and in which geographies do these rights apply?",
+        "answer": "The Company holds patents, designs, copyrights, trademarks, trade secrets and other forms of intellectual property rights in the U.S. and various foreign countries.",
+        "source_passage": "This includes patents, designs, copyrights, trademarks, trade secrets and other forms of intellectual property rights in the U.S. and various foreign countries.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly enumerates the IP right types and geographies covered in the Intellectual Property section."
+      },
+      {
+        "question": "In Apple Inc.'s fiscal 2025 10-K, what risk does the Company acknowledge regarding third-party intellectual property licenses that are included in its products and services?",
+        "answer": "The Company acknowledges there is no guarantee that such licenses could be obtained in the future on reasonable terms or at all.",
+        "source_passage": "While the Company has generally been able to obtain such licenses on commercially reasonable terms in the past, there is no guarantee that such licenses could be obtained in the future on reasonable terms or at all.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The risk requires reading the full licensing risk sentence and identifying the specific forward-looking caveat about future license availability."
+      },
+      {
+        "question": "In Apple Inc.'s fiscal 2025 10-K, what dual effect can new product and service introductions have on Apple's indirect distribution channels?",
+        "answer": "New product introductions cause indirect distribution channels to be filled with new inventory following a product launch, while channel inventory of an older product often declines as the launch of a newer product approaches.",
+        "source_passage": "The timing of product introductions can also impact the Company's net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The question requires synthesizing two distinct effects on channel inventory described in the same sentence: new inventory fill-in for the launched product and inventory decline for the older product."
+      },
+      {
+        "question": "In Apple Inc.'s fiscal 2025 10-K, what does the Company primarily rely on to differentiate its business, despite holding a broad collection of intellectual property rights?",
+        "answer": "The Company relies primarily on the innovative skills, technical competence and marketing abilities of its personnel.",
+        "source_passage": "Although the Company believes the ownership of such intellectual property rights is an important factor in differentiating its business and that its success does depend in part on such ownership, the Company relies primarily on the innovative skills, technical competence and marketing abilities of its personnel.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "The question requires understanding the contrast drawn between IP ownership (acknowledged as important but secondary) and human capital (identified as the primary differentiator), combining two clauses within one sentence."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 13 states verbatim 'As of September 27, 2025, the Company had approximately 166,000 full-time equivalent employees.' Answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 10 states verbatim that the Company historically experienced higher net sales in its first quarter due in part to seasonal holiday demand. Answer matches."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 4 enumerates patents, designs, copyrights, trademarks, trade secrets and other forms of IP rights in the U.S. and various foreign countries. Answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 7 states verbatim 'there is no guarantee that such licenses could be obtained in the future on reasonable terms or at all.' Answer captures this caveat correctly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 10 describes channels being filled with new inventory following a launch and older-product channel inventory declining as a newer launch approaches. Both effects are accurately synthesized."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 4 states the Company relies primarily on the innovative skills, technical competence and marketing abilities of its personnel. Answer matches the contrast accurately."
+    }
+  ]
+}

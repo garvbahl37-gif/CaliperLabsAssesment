@@ -1,0 +1,99 @@
+{
+  "chunk_id": "672d9d6408ae",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What fine did the European Commission impose on Apple in the Article 5(4) Investigation, and on what date was it issued?",
+        "answer": "On April 23, 2025, the Commission fined Apple €500 million in the Article 5(4) Investigation.",
+        "source_passage": "On April 23, 2025, the Commission fined the Company €500 million in the Article 5(4) Investigation and issued a cease and desist order requiring the Company to remove technical and commercial restrictions that prevent developers from steering users to alternative distribution channels outside the App Store.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states the fine amount and the date it was imposed in the Article 5(4) Investigation."
+      },
+      {
+        "question": "What is the maximum fine the European Commission can impose on Apple if it makes a final determination of a violation in the Article 6(4) Investigation?",
+        "answer": "The Commission may impose fines up to 10% of the Company's annual worldwide net sales.",
+        "source_passage": "If the Commission makes a final determination in the Article 6(4) Investigation that there has been a violation, it can issue a cease and desist order and may impose fines up to 10% of the Company's annual worldwide net sales.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly states the maximum fine threshold as a percentage of annual worldwide net sales for a final violation finding in the Article 6(4) Investigation."
+      },
+      {
+        "question": "Which U.S. court referred Apple to the U.S. Attorney for the Northern District of California regarding possible criminal contempt proceedings in the Epic Games lawsuit?",
+        "answer": "The California District Court (the U.S. District Court for the Northern District of California) referred the Company to the U.S. Attorney for the Northern District of California.",
+        "source_passage": "The California District Court also denied the Company's motion to narrow or vacate the 2021 Injunction and referred the Company to the U.S. Attorney for the Northern District of California for a determination whether criminal contempt proceedings are appropriate.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly identifies the California District Court as the court that made the referral to the U.S. Attorney for potential criminal contempt proceedings."
+      },
+      {
+        "question": "How many distinct formal DMA investigations did the European Commission open against Apple between March 2024 and June 2024, and what were their subjects?",
+        "answer": "Two formal investigations were opened: the Article 5(4) Investigation (announced March 25, 2024), relating to how developers may communicate and promote offers to end users and conclude contracts outside the App Store; and the Article 6(4) Investigation (announced June 24, 2024), regarding whether Apple's new contractual requirements for third-party app developers and app marketplaces may violate the DMA.",
+        "source_passage": "On March 25, 2024, the Commission announced that it had opened a formal noncompliance investigation against the Company under Article 5(4) of the EU DMA (\"Article 5(4) Investigation\"). The Article 5(4) Investigation relates to how developers may communicate and promote offers to end users for apps distributed through the App Store, as well as how developers may conclude contracts with those end users. On June 24, 2024, the Commission announced that it had opened an additional formal investigation against the Company regarding whether the Company's new contractual requirements for third-party app developers and app marketplaces may violate the DMA (\"Article 6(4) Investigation\").",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering correctly requires combining two separate facts from different sentences: counting both investigations and summarizing the distinct subject matter of each."
+      },
+      {
+        "question": "In the Epic Games lawsuit, what actions did the California District Court's April 30, 2025 ruling prohibit Apple from taking with respect to out-of-app purchases?",
+        "answer": "The California District Court enjoined Apple from imposing any commission or any fee on purchases that consumers make outside an app; restricting, conditioning, limiting, or prohibiting how developers guide consumers to purchases outside an app; or otherwise interfering with a consumer's choice to proceed in or out of an app.",
+        "source_passage": "On April 30, 2025, the California District Court found the Company to be in violation of the 2021 Injunction and enjoined the Company from imposing any commission or any fee on purchases that consumers make outside an app; restricting, conditioning, limiting, or prohibiting how developers guide consumers to purchases outside an app; or otherwise interfering with a consumer's choice to proceed in or out of an app.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The excerpt enumerates three specific prohibitions imposed by the April 30, 2025 ruling, requiring careful reading to capture all three without paraphrasing."
+      },
+      {
+        "question": "Comparing the legal remedies sought in the DOJ lawsuit versus the Epic Games lawsuit against Apple, what is the key difference in the types of relief requested?",
+        "answer": "In the DOJ lawsuit, the DOJ is seeking only equitable relief to redress alleged anticompetitive behavior. In the Epic Games lawsuit, the California District Court issued injunctive relief (the 2021 Injunction and subsequent orders) based on violations of California's unfair competition law, while related civil litigation also seeks monetary damages and other nonmonetary relief.",
+        "source_passage": "The DOJ is seeking equitable relief to redress the alleged anticompetitive behavior. In addition, various civil litigation matters have been filed in state and federal courts in the U.S. alleging similar violations of U.S. antitrust laws and seeking monetary damages and other nonmonetary relief.",
+        "question_type": "comparison",
+        "difficulty": "hard",
+        "rationale": "The question requires synthesizing information from two separate legal proceedings described in the excerpt and comparing the nature of remedies sought, distinguishing equitable relief from monetary damages and injunctive orders."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Passage appears verbatim in the excerpt; the €500 million fine and April 23, 2025 date in the Article 5(4) Investigation are stated directly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt states the Commission may impose fines up to 10% of the Company's annual worldwide net sales for a final Article 6(4) violation; answer matches exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt states the California District Court referred the Company to the U.S. Attorney for the Northern District of California regarding possible criminal contempt; answer matches."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Excerpt confirms two investigations: Article 5(4) announced March 25, 2024 (developer communication/contracts outside App Store) and Article 6(4) announced June 24, 2024 (new contractual requirements for developers and marketplaces). Count and subjects are correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Passage appears verbatim; all three April 30, 2025 prohibitions (no commission/fee on outside purchases, no restricting how developers guide consumers, no interfering with consumer choice) are accurately captured."
+    },
+    {
+      "verdict": "PARTIAL",
+      "confidence": 0.7,
+      "answer_is_correct": false,
+      "passage_supports_answer": true,
+      "reasoning": "DOJ equitable relief and Epic injunctive relief under California's unfair competition law are supported, but the excerpt attributes monetary damages to 'various civil litigation matters' generally (in the DOJ section), not specifically to Epic-related civil litigation; the answer's framing conflates this."
+    }
+  ]
+}

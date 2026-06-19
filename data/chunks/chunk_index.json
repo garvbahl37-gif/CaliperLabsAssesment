@@ -1,0 +1,389 @@
+[
+  {
+    "index": 0,
+    "chunk_id": "ef88950bc59b",
+    "section_item": "1",
+    "section_name": "Business",
+    "part_index": 0,
+    "n_chars": 5298,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/00_ef88950bc59b.txt"
+  },
+  {
+    "index": 1,
+    "chunk_id": "93c951894acf",
+    "section_item": "1",
+    "section_name": "Business",
+    "part_index": 1,
+    "n_chars": 5005,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/01_93c951894acf.txt"
+  },
+  {
+    "index": 2,
+    "chunk_id": "e77244753fdc",
+    "section_item": "1",
+    "section_name": "Business",
+    "part_index": 2,
+    "n_chars": 4933,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/02_e77244753fdc.txt"
+  },
+  {
+    "index": 3,
+    "chunk_id": "0d5fa342f633",
+    "section_item": "1",
+    "section_name": "Business",
+    "part_index": 3,
+    "n_chars": 1377,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/03_0d5fa342f633.txt"
+  },
+  {
+    "index": 4,
+    "chunk_id": "2837200a20a9",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 0,
+    "n_chars": 3147,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/04_2837200a20a9.txt"
+  },
+  {
+    "index": 5,
+    "chunk_id": "bd47d5635fe0",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 1,
+    "n_chars": 5425,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/05_bd47d5635fe0.txt"
+  },
+  {
+    "index": 6,
+    "chunk_id": "d3d8c5d12267",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 2,
+    "n_chars": 1083,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/06_d3d8c5d12267.txt"
+  },
+  {
+    "index": 7,
+    "chunk_id": "271683fc0390",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 3,
+    "n_chars": 4871,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/07_271683fc0390.txt"
+  },
+  {
+    "index": 8,
+    "chunk_id": "59416857c020",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 4,
+    "n_chars": 4975,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/08_59416857c020.txt"
+  },
+  {
+    "index": 9,
+    "chunk_id": "63bf232d1181",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 5,
+    "n_chars": 1158,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/09_63bf232d1181.txt"
+  },
+  {
+    "index": 10,
+    "chunk_id": "27c6182fd06e",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 6,
+    "n_chars": 5514,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/10_27c6182fd06e.txt"
+  },
+  {
+    "index": 11,
+    "chunk_id": "6434e51b7871",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 7,
+    "n_chars": 6077,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/11_6434e51b7871.txt"
+  },
+  {
+    "index": 12,
+    "chunk_id": "c16a35709231",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 8,
+    "n_chars": 5627,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/12_c16a35709231.txt"
+  },
+  {
+    "index": 13,
+    "chunk_id": "cfa19a6ff5ba",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 9,
+    "n_chars": 5716,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/13_cfa19a6ff5ba.txt"
+  },
+  {
+    "index": 14,
+    "chunk_id": "d60b56d88cc0",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 10,
+    "n_chars": 4650,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/14_d60b56d88cc0.txt"
+  },
+  {
+    "index": 15,
+    "chunk_id": "cd439426e57d",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 11,
+    "n_chars": 1375,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/15_cd439426e57d.txt"
+  },
+  {
+    "index": 16,
+    "chunk_id": "7754acfffb5f",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 12,
+    "n_chars": 5809,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/16_7754acfffb5f.txt"
+  },
+  {
+    "index": 17,
+    "chunk_id": "cc2bc2a0bbd6",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 13,
+    "n_chars": 3625,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/17_cc2bc2a0bbd6.txt"
+  },
+  {
+    "index": 18,
+    "chunk_id": "9f2f7e9661f0",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 14,
+    "n_chars": 3253,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/18_9f2f7e9661f0.txt"
+  },
+  {
+    "index": 19,
+    "chunk_id": "e94cadf0bda2",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 15,
+    "n_chars": 5383,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/19_e94cadf0bda2.txt"
+  },
+  {
+    "index": 20,
+    "chunk_id": "790037a4739c",
+    "section_item": "1A",
+    "section_name": "Risk Factors",
+    "part_index": 16,
+    "n_chars": 1689,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/20_790037a4739c.txt"
+  },
+  {
+    "index": 21,
+    "chunk_id": "4f543473b4c6",
+    "section_item": "1C",
+    "section_name": "Cybersecurity",
+    "part_index": 0,
+    "n_chars": 2675,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/21_4f543473b4c6.txt"
+  },
+  {
+    "index": 22,
+    "chunk_id": "672d9d6408ae",
+    "section_item": "3",
+    "section_name": "Legal Proceedings",
+    "part_index": 0,
+    "n_chars": 5372,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/22_672d9d6408ae.txt"
+  },
+  {
+    "index": 23,
+    "chunk_id": "2eac519b142a",
+    "section_item": "5",
+    "section_name": "Market for Registrant's Common Equity",
+    "part_index": 0,
+    "n_chars": 2630,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/23_2eac519b142a.txt"
+  },
+  {
+    "index": 24,
+    "chunk_id": "a763d7990a9f",
+    "section_item": "7",
+    "section_name": "Management's Discussion and Analysis (MD&A)",
+    "part_index": 0,
+    "n_chars": 5888,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/24_a763d7990a9f.txt"
+  },
+  {
+    "index": 25,
+    "chunk_id": "8ac2ac0e3031",
+    "section_item": "7",
+    "section_name": "Management's Discussion and Analysis (MD&A)",
+    "part_index": 1,
+    "n_chars": 4503,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/25_8ac2ac0e3031.txt"
+  },
+  {
+    "index": 26,
+    "chunk_id": "8c613469a87f",
+    "section_item": "7",
+    "section_name": "Management's Discussion and Analysis (MD&A)",
+    "part_index": 2,
+    "n_chars": 5961,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/26_8c613469a87f.txt"
+  },
+  {
+    "index": 27,
+    "chunk_id": "528b7c5bd092",
+    "section_item": "7",
+    "section_name": "Management's Discussion and Analysis (MD&A)",
+    "part_index": 3,
+    "n_chars": 2566,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/27_528b7c5bd092.txt"
+  },
+  {
+    "index": 28,
+    "chunk_id": "571882f612b2",
+    "section_item": "7A",
+    "section_name": "Quantitative and Qualitative Disclosures About Market Risk",
+    "part_index": 0,
+    "n_chars": 2953,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/28_571882f612b2.txt"
+  },
+  {
+    "index": 29,
+    "chunk_id": "46e0030176ac",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 0,
+    "n_chars": 5367,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/29_46e0030176ac.txt"
+  },
+  {
+    "index": 30,
+    "chunk_id": "aee2f6158b78",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 1,
+    "n_chars": 4142,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/30_aee2f6158b78.txt"
+  },
+  {
+    "index": 31,
+    "chunk_id": "50290def0b6b",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 2,
+    "n_chars": 3375,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/31_50290def0b6b.txt"
+  },
+  {
+    "index": 32,
+    "chunk_id": "99169ef6023c",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 3,
+    "n_chars": 5857,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/32_99169ef6023c.txt"
+  },
+  {
+    "index": 33,
+    "chunk_id": "d59aeee802a2",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 4,
+    "n_chars": 4641,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/33_d59aeee802a2.txt"
+  },
+  {
+    "index": 34,
+    "chunk_id": "d04536b100c7",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 5,
+    "n_chars": 5029,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/34_d04536b100c7.txt"
+  },
+  {
+    "index": 35,
+    "chunk_id": "766c9795b362",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 6,
+    "n_chars": 5943,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/35_766c9795b362.txt"
+  },
+  {
+    "index": 36,
+    "chunk_id": "2ea67b07675a",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 7,
+    "n_chars": 5467,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/36_2ea67b07675a.txt"
+  },
+  {
+    "index": 37,
+    "chunk_id": "b68210041959",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 8,
+    "n_chars": 5163,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/37_b68210041959.txt"
+  },
+  {
+    "index": 38,
+    "chunk_id": "82e47667de0b",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 9,
+    "n_chars": 3624,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/38_82e47667de0b.txt"
+  },
+  {
+    "index": 39,
+    "chunk_id": "6670c8b01060",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 10,
+    "n_chars": 5773,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/39_6670c8b01060.txt"
+  },
+  {
+    "index": 40,
+    "chunk_id": "f5f1dc517248",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 11,
+    "n_chars": 5845,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/40_f5f1dc517248.txt"
+  },
+  {
+    "index": 41,
+    "chunk_id": "165136f2ae88",
+    "section_item": "8",
+    "section_name": "Financial Statements and Supplementary Data",
+    "part_index": 12,
+    "n_chars": 5649,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/41_165136f2ae88.txt"
+  },
+  {
+    "index": 42,
+    "chunk_id": "785c30758a83",
+    "section_item": "9A",
+    "section_name": "Controls and Procedures",
+    "part_index": 0,
+    "n_chars": 4430,
+    "path": "D:/Projects/CaliperAssesment/data/chunks/txt/42_785c30758a83.txt"
+  }
+]

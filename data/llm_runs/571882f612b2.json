@@ -1,0 +1,99 @@
+{
+  "chunk_id": "571882f612b2",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "As of September 27, 2025, what was the estimated decline in fair value of Apple's investment portfolio from a hypothetical 100 basis point increase in interest rates across all tenors?",
+        "answer": "$2,416 million",
+        "source_passage": "Investment portfolio | 100 basis points, all tenors | Decline in fair value | $ | 2,416 | $ | 2,755",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The table directly states a $2,416 million decline in fair value for the investment portfolio under a 100 basis point rate increase as of September 27, 2025."
+      },
+      {
+        "question": "Between fiscal year-end 2024 and fiscal year-end 2025, how did the potential decline in fair value of Apple's investment portfolio change under a hypothetical 100 basis point interest rate increase?",
+        "answer": "The potential decline in fair value decreased by $339 million, from $2,755 million in 2024 to $2,416 million in 2025.",
+        "source_passage": "Investment portfolio | 100 basis points, all tenors | Decline in fair value | $ | 2,416 | $ | 2,755",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "Comparing the 2025 figure ($2,416M) to the 2024 figure ($2,755M) and computing the difference ($2,755M - $2,416M = $339M) yields the year-over-year change."
+      },
+      {
+        "question": "As of September 27, 2025, what was the estimated increase in Apple's annual interest expense on term debt resulting from a hypothetical 100 basis point increase in interest rates?",
+        "answer": "$129 million",
+        "source_passage": "Term debt | 100 basis points, all tenors | Increase in annual interest expense | $ | 129 | $ | 139",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The table directly states a $129 million increase in annual interest expense for term debt under a 100 basis point rate increase as of September 27, 2025."
+      },
+      {
+        "question": "What VAR methodology did Apple use to assess the potential impact of exchange rate fluctuations on its foreign currency derivative positions, and what confidence level was applied?",
+        "answer": "Apple used a value-at-risk (\"VAR\") model with a Monte Carlo simulation, applying a 95% confidence interval.",
+        "source_passage": "The Company applied a value-at-risk (\"VAR\") model to its foreign currency derivative positions to assess the potential impact of fluctuations in exchange rates. The VAR model used a Monte Carlo simulation. The VAR is the maximum expected loss in fair value, for a given confidence interval, to the Company's foreign currency derivative positions due to adverse movements in rates. Based on the results of the model, the Company estimates, with 95% confidence",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt explicitly names the VAR model with Monte Carlo simulation and the 95% confidence interval used to estimate maximum one-day loss."
+      },
+      {
+        "question": "In fiscal year 2025, by how much did Apple's estimated maximum one-day VAR loss in fair value of foreign currency derivative positions increase compared to fiscal year 2024?",
+        "answer": "The maximum one-day VAR loss increased by $52 million, from $538 million as of September 28, 2024 to $590 million as of September 27, 2025.",
+        "source_passage": "the Company estimates, with 95% confidence, a maximum one-day loss in fair value of $590 million and $538 million as of September 27, 2025 and September 28, 2024, respectively.",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Subtracting the 2024 VAR figure ($538M) from the 2025 VAR figure ($590M) yields the $52M increase, directly derivable from the stated values."
+      },
+      {
+        "question": "According to Apple's Item 7A disclosures for fiscal year 2025, what combined total increase in annual interest expense and decline in investment portfolio fair value would result from a 100 basis point rise in interest rates as of September 27, 2025?",
+        "answer": "The combined impact would be $2,545 million: a $2,416 million decline in investment portfolio fair value plus a $129 million increase in annual interest expense on term debt.",
+        "source_passage": "Investment portfolio | 100 basis points, all tenors | Decline in fair value | $ | 2,416 | $ | 2,755\nTerm debt | 100 basis points, all tenors | Increase in annual interest expense | $ | 129 | $ | 139",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Adding the two 2025 figures from the interest rate sensitivity table ($2,416M + $129M = $2,545M) requires combining two separate rows in the excerpt."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 7 of the excerpt states the investment portfolio decline in fair value for 100 basis points is $2,416 million in the 2025 column, matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "2024 value $2,755M minus 2025 value $2,416M = $339M decrease; arithmetic re-derived and correct, both figures from line 7."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 8 shows term debt increase in annual interest expense for 100 basis points is $129 million in the 2025 column, matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 12 explicitly states a VAR model using Monte Carlo simulation with 95% confidence, fully supporting the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 12 gives $590M (2025) and $538M (2024); $590M - $538M = $52M increase, re-derived and correct."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Lines 7 and 8 give 2025 figures $2,416M and $129M; $2,416M + $129M = $2,545M, arithmetic re-derived and correct."
+    }
+  ]
+}

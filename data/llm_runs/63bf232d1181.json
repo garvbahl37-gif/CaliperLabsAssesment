@@ -1,0 +1,84 @@
+{
+  "chunk_id": "63bf232d1181",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "According to Apple's fiscal year 2025 10-K Risk Factors, what is the primary supply-chain characteristic of the custom components used in Apple's new products?",
+        "answer": "Apple's new products often utilize custom components available from only one source.",
+        "source_passage": "the Company's new products often utilize custom components available from only one source.",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The excerpt directly states that new products use custom components available from only one source, making this a straightforward single-fact lookup."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what two production-side factors at suppliers are cited as the reason initial capacity constraints may exist when a component or product uses new technologies?",
+        "answer": "Initial capacity constraints may exist until the suppliers' yields have matured or their manufacturing capacities have increased.",
+        "source_passage": "When a component or product uses new technologies, initial capacity constraints may exist until the suppliers' yields have matured or their manufacturing capacities have increased.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "Answering correctly requires identifying and combining both cited factors—supplier yield maturity and manufacturing capacity increases—from the same sentence in the excerpt."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what three specific risks related to component suppliers does Apple identify that could further limit its ability to obtain sufficient component quantities?",
+        "answer": "Component suppliers may fail, be subject to consolidation within a particular industry, or decide to concentrate on the production of common components instead of components customized to meet the Company's requirements.",
+        "source_passage": "component suppliers may fail, be subject to consolidation within a particular industry, or decide to concentrate on the production of common components instead of components customized to meet the Company's requirements",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "The question requires the reader to enumerate and synthesize three distinct supplier-side risk scenarios listed in a single clause of the excerpt."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what four potential adverse outcomes does Apple warn could result from significant supply shortages and price increases?",
+        "answer": "Supply shortages and price increases can materially adversely affect Apple's business, results of operations, financial condition and stock price.",
+        "source_passage": "the Company remains subject to significant risks of supply shortages and price increases that can materially adversely affect its business, results of operations, financial condition and stock price.",
+        "question_type": "fact_extraction",
+        "difficulty": "medium",
+        "rationale": "The answer requires identifying all four harm categories—business, results of operations, financial condition, and stock price—explicitly enumerated at the end of the passage."
+      },
+      {
+        "question": "In Apple's fiscal year 2025 10-K Risk Factors, what two procurement outcomes does Apple acknowledge it may fail to achieve when attempting to extend or renew component supply agreements?",
+        "answer": "Apple may not be able to extend or renew agreements for the supply of components on similar terms, or at all, and may not be successful in obtaining sufficient quantities from its suppliers in a timely manner, or in identifying and obtaining sufficient quantities from an alternative source.",
+        "source_passage": "The Company may not be able to extend or renew agreements for the supply of components on similar terms, or at all, and may not be successful in obtaining sufficient quantities from its suppliers in a timely manner, or in identifying and obtaining sufficient quantities from an alternative source.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "The question requires carefully distinguishing and combining two related but distinct procurement failure scenarios—contract renewal failure and volume sourcing failure (including alternative sourcing)—stated across the same sentence."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage 'the Company's new products often utilize custom components available from only one source' appears verbatim in the excerpt and the answer restates it accurately."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited sentence appears verbatim; the answer correctly identifies both factors—suppliers' yields maturing and manufacturing capacities increasing."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The clause appears verbatim and the answer correctly enumerates the three risks: suppliers may fail, be subject to consolidation, or concentrate on common components instead of customized ones."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The passage appears verbatim and the answer correctly lists all four harm categories: business, results of operations, financial condition, and stock price."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "The cited sentence appears verbatim and the answer accurately reproduces both procurement-failure scenarios: inability to extend/renew supply agreements and inability to obtain sufficient quantities from suppliers or an alternative source."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "chunk_id": "8ac2ac0e3031",
+  "generation": {
+    "qa_pairs": [
+      {
+        "question": "What was Apple's total gross margin percentage in fiscal 2025?",
+        "answer": "46.9%",
+        "source_passage": "Total gross margin percentage | 46.9 | % | 46.2 | % | 44.1 | %",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "The total gross margin percentage for 2025 is directly stated in the gross margin table as 46.9%."
+      },
+      {
+        "question": "In fiscal 2025, what was the dollar increase in Apple's Services gross margin compared to fiscal 2024?",
+        "answer": "$11,264 million (from $71,050 million in 2024 to $82,314 million in 2025)",
+        "source_passage": "Services | 82,314 | 71,050 | 60,345",
+        "question_type": "numeric_calculation",
+        "difficulty": "medium",
+        "rationale": "Subtracting the 2024 Services gross margin ($71,050M) from the 2025 figure ($82,314M) yields a year-over-year increase of $11,264 million."
+      },
+      {
+        "question": "How did Apple's Products gross margin percentage change from fiscal 2024 to fiscal 2025, and what were the primary drivers?",
+        "answer": "Products gross margin percentage decreased from 37.2% in 2024 to 36.8% in 2025, primarily due to a different mix of products and tariff costs, partially offset by other favorable costs.",
+        "source_passage": "Products gross margin percentage decreased during 2025 compared to 2024 primarily due to a different mix of products and tariff costs, partially offset by other favorable costs.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "medium",
+        "rationale": "Answering fully requires combining the percentage figures from the gross margin table (37.2% in 2024 vs. 36.8% in 2025) with the qualitative explanation of drivers given in the Products Gross Margin section."
+      },
+      {
+        "question": "In fiscal 2025, how did Apple's effective tax rate compare to its statutory federal income tax rate, and what was the difference in percentage points?",
+        "answer": "Apple's effective tax rate of 15.6% was 5.4 percentage points lower than the statutory federal income tax rate of 21%.",
+        "source_passage": "Effective tax rate | 15.6 | % | 24.1 | % | 14.7 | %\nStatutory federal income tax rate | 21 | % | 21 | % | 21 | %",
+        "question_type": "comparison",
+        "difficulty": "medium",
+        "rationale": "The comparison requires reading both the effective tax rate (15.6%) and the statutory rate (21%) from the table and calculating the 5.4 percentage point gap."
+      },
+      {
+        "question": "What was the year-over-year change in Apple's provision for income taxes between fiscal 2024 and fiscal 2025, and what was identified as the primary reason for the decrease?",
+        "answer": "Apple's provision for income taxes decreased by $9,030 million, from $29,749 million in 2024 to $20,719 million in 2025, primarily due to a $10.7 billion year-over-year decrease related to the State Aid Decision and the impact of changes in unrecognized tax benefits, partially offset by a change in valuation allowance and a higher effective tax rate on foreign earnings.",
+        "source_passage": "The Company's effective tax rate for 2025 was lower compared to 2024 due to a $10.7 billion year-over-year decrease in the provision for income taxes related to the State Aid Decision (refer to Note 7, \"Income Taxes\" in the Notes to Consolidated Financial Statements in Part II, Item 8 of this Form 10-K) and the impact of changes in unrecognized tax benefits, partially offset by a change in valuation allowance and a higher effective tax rate on foreign earnings.",
+        "question_type": "multi_step_reasoning",
+        "difficulty": "hard",
+        "rationale": "A full answer requires computing the dollar change in income taxes ($29,749M minus $20,719M = $9,030M) from the table and then combining it with the qualitative explanation of the drivers cited in the narrative."
+      },
+      {
+        "question": "In fiscal 2025, what was Apple's total operating expenses amount and its percentage of total net sales?",
+        "answer": "Apple's total operating expenses in fiscal 2025 were $62,151 million, representing 15% of total net sales.",
+        "source_passage": "Total operating expenses | $ | 62,151 | 8 | % | $ | 57,467 | 5 | % | $ | 54,847\nPercentage of total net sales | 15 | % | 15 | % | 14 | %",
+        "question_type": "fact_extraction",
+        "difficulty": "easy",
+        "rationale": "Both the dollar amount and the percentage of total net sales for 2025 total operating expenses are directly stated in the operating expenses table."
+      }
+    ]
+  },
+  "verifications": [
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 32 of the excerpt states 'Total gross margin percentage | 46.9 | %' for 2025, matching the answer exactly."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.97,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 26 gives Services gross margin of 82,314 (2025) and 71,050 (2024); re-derived 82,314 - 71,050 = 11,264, matching the stated increase."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 30 shows Products gross margin percentage 36.8% (2025) vs 37.2% (2024), a decrease; line 36 confirms the drivers (different mix of products and tariff costs, partially offset by other favorable costs)."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.98,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Lines 65-66 give effective tax rate 15.6% and statutory rate 21%; 21 - 15.6 = 5.4 percentage points lower, matching the answer."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.96,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 64 shows provision of 20,719 (2025) and 29,749 (2024); 29,749 - 20,719 = 9,030 decrease. Line 69 confirms the $10.7B State Aid Decision driver, unrecognized tax benefits, and offsetting valuation allowance and higher foreign earnings rate."
+    },
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 0.99,
+      "answer_is_correct": true,
+      "passage_supports_answer": true,
+      "reasoning": "Line 51 states total operating expenses of $62,151M for 2025 and line 52 states 15% of total net sales, both matching the answer."
+    }
+  ]
+}
